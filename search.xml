@@ -6,6 +6,8 @@
     <content><![CDATA[<h1 id="Motrix-Aria2-Patch"><a href="#Motrix-Aria2-Patch" class="headerlink" title="Motrix-Aria2-Patch"></a>Motrix-Aria2-Patch</h1><h4 id="编译增强版Aria2添加到Motrix中使得下载速度加快"><a href="#编译增强版Aria2添加到Motrix中使得下载速度加快" class="headerlink" title="编译增强版Aria2添加到Motrix中使得下载速度加快"></a>编译增强版Aria2添加到Motrix中使得下载速度加快</h4><p><a href="https://github.com/Little-Red-Stone/Motrix-Aria2-Patch">GitHub链接</a></p>
 <hr>
 <h2 id="关于"><a href="#关于" class="headerlink" title="关于"></a>关于</h2><p>此脚本是本人在学业之余开发的，欢迎借鉴与指出不足。<del>由于本人Shell是废的，所以是用Python写的简短代码</del>。代码很简单，无论你编程水平是高是低，配合注释应该是能看懂了（<del>不是吧不是吧，你都知道GitHub了，难道这点代码都看不懂？</del>）</p>
+<span id="more"></span>
+
 <h4 id="注意，本人是在Mac-OS上写的脚本，用Linux的小伙伴可能需要微调，用Win的小伙伴…"><a href="#注意，本人是在Mac-OS上写的脚本，用Linux的小伙伴可能需要微调，用Win的小伙伴…" class="headerlink" title="注意，本人是在Mac OS上写的脚本，用Linux的小伙伴可能需要微调，用Win的小伙伴…"></a>注意，本人是在Mac OS上写的脚本，用Linux的小伙伴可能需要微调，<del>用Win的小伙伴…</del></h4><h2 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h2><h3 id="HomeBrew安装"><a href="#HomeBrew安装" class="headerlink" title="HomeBrew安装"></a>HomeBrew安装</h3><p>首先，如果你的电脑上没有HomeBrew，请先自行安装，脚本里要用到。这里给一个国内大神的脚本</p>
 <figure class="highlight sh"><table><tr><td class="code"><pre><span class="line">/bin/zsh -c <span class="string">&quot;<span class="subst">$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)</span>&quot;</span></span><br></pre></td></tr></table></figure>
 
@@ -39,31 +41,11 @@
       </tags>
   </entry>
   <entry>
-    <title>better_thunder</title>
-    <url>/2021/12/11/better-thunder/</url>
-    <content><![CDATA[<h1 id="better-thunder"><a href="#better-thunder" class="headerlink" title="better_thunder"></a>better_thunder</h1><p>用Python+Pygame开发的一个迅雷精简工具</p>
-<p><a href="https://github.com/Little-Red-Stone/better_thunder">GitHub链接</a></p>
-<h3 id="迅雷各插件名及其所代表内容"><a href="#迅雷各插件名及其所代表内容" class="headerlink" title="迅雷各插件名及其所代表内容"></a>迅雷各插件名及其所代表内容</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"> applications    应用页面（删除后顶部无应用 Tab，打不开设置，不建议删除）</span><br><span class="line">   cloudspace    迅雷云盘</span><br><span class="line">browserhelper    浏览器支持</span><br><span class="line">   diagnostic    网络诊断（可以不删除）</span><br><span class="line"> featuredpage    精选页面（删除后顶部无精选 Tab ）</span><br><span class="line">     feedback    意见反馈</span><br><span class="line">   livestream    直播相关</span><br><span class="line">   liveupdate    直播相关</span><br><span class="line">        myvip    会员中心</span><br><span class="line">onethingcloud    玩客云</span><br><span class="line">  preferences    偏好设置（不建议删除）</span><br><span class="line">  softmanager    应用管理（卸载）</span><br><span class="line">     subtitle    内置字幕下载</span><br><span class="line">  thunderword    迅雷世界</span><br><span class="line">    userlogin    用户登录</span><br><span class="line">     viprenew    会员相关（需要会员功能的不要删除，同时也不要删除用户登录插件）</span><br><span class="line">      viptips    会员相关（需要会员功能的不要删除，同时也不要删除用户登录插件）</span><br><span class="line">      webgame    网络游戏</span><br><span class="line">    xlbrowser    内置浏览器（可以不删除）</span><br><span class="line">     xlplayer    迅雷影音</span><br></pre></td></tr></table></figure>
-
-<h3 id="注意"><a href="#注意" class="headerlink" title="! 注意 !"></a>! 注意 !</h3><p>本软件适用于Mac用户，Windows用户请在以下两个网址中下载（果核剥壳yyds）</p>
-<ul>
-<li><a href="https://www.ghxi.com/thunder11green.html">迅雷11</a></li>
-<li><a href="https://www.ghxi.com/thunders.html">ThunderS(迅雷极简融合版)</a></li>
-</ul>
-<h3 id="声明"><a href="#声明" class="headerlink" title="! 声明 !"></a>! 声明 !</h3><p>本软件仅用于学习研究使用, 请于下载后24小时内自行删除<br><img src="https://github.com/itsXZH/better_thunder/blob/main/img/AppIcon.png?raw=true" alt="img"><br><img src="https://github.com/itsXZH/better_thunder/blob/main/Screen%20Shot%201.png?raw=true" alt="img"><br><img src="https://github.com/itsXZH/better_thunder/blob/main/Screen%20Shot%202.png?raw=true" alt="img"></p>
-]]></content>
-      <categories>
-        <category>Projects</category>
-      </categories>
-      <tags>
-        <tag>Download</tag>
-        <tag>迅雷</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Hello World</title>
     <url>/2021/12/11/hello-world/</url>
     <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<span id="more"></span>
+
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
 
 <p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
@@ -82,6 +64,30 @@
       </categories>
       <tags>
         <tag>Hello World</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>better_thunder</title>
+    <url>/2021/12/11/better-thunder/</url>
+    <content><![CDATA[<h1 id="better-thunder"><a href="#better-thunder" class="headerlink" title="better_thunder"></a>better_thunder</h1><p>用Python+Pygame开发的一个迅雷精简工具</p>
+<p><a href="https://github.com/Little-Red-Stone/better_thunder">GitHub链接</a></p>
+<span id="more"></span>
+
+<h3 id="迅雷各插件名及其所代表内容"><a href="#迅雷各插件名及其所代表内容" class="headerlink" title="迅雷各插件名及其所代表内容"></a>迅雷各插件名及其所代表内容</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"> applications    应用页面（删除后顶部无应用 Tab，打不开设置，不建议删除）</span><br><span class="line">   cloudspace    迅雷云盘</span><br><span class="line">browserhelper    浏览器支持</span><br><span class="line">   diagnostic    网络诊断（可以不删除）</span><br><span class="line"> featuredpage    精选页面（删除后顶部无精选 Tab ）</span><br><span class="line">     feedback    意见反馈</span><br><span class="line">   livestream    直播相关</span><br><span class="line">   liveupdate    直播相关</span><br><span class="line">        myvip    会员中心</span><br><span class="line">onethingcloud    玩客云</span><br><span class="line">  preferences    偏好设置（不建议删除）</span><br><span class="line">  softmanager    应用管理（卸载）</span><br><span class="line">     subtitle    内置字幕下载</span><br><span class="line">  thunderword    迅雷世界</span><br><span class="line">    userlogin    用户登录</span><br><span class="line">     viprenew    会员相关（需要会员功能的不要删除，同时也不要删除用户登录插件）</span><br><span class="line">      viptips    会员相关（需要会员功能的不要删除，同时也不要删除用户登录插件）</span><br><span class="line">      webgame    网络游戏</span><br><span class="line">    xlbrowser    内置浏览器（可以不删除）</span><br><span class="line">     xlplayer    迅雷影音</span><br></pre></td></tr></table></figure>
+
+<h3 id="注意"><a href="#注意" class="headerlink" title="! 注意 !"></a>! 注意 !</h3><p>本软件适用于Mac用户，Windows用户请在以下两个网址中下载（果核剥壳yyds）</p>
+<ul>
+<li><a href="https://www.ghxi.com/thunder11green.html">迅雷11</a></li>
+<li><a href="https://www.ghxi.com/thunders.html">ThunderS(迅雷极简融合版)</a></li>
+</ul>
+<h3 id="声明"><a href="#声明" class="headerlink" title="! 声明 !"></a>! 声明 !</h3><p>本软件仅用于学习研究使用, 请于下载后24小时内自行删除<br><img src="https://github.com/itsXZH/better_thunder/blob/main/img/AppIcon.png?raw=true" alt="img"><br><img src="https://github.com/itsXZH/better_thunder/blob/main/Screen%20Shot%201.png?raw=true" alt="img"><br><img src="https://github.com/itsXZH/better_thunder/blob/main/Screen%20Shot%202.png?raw=true" alt="img"></p>
+]]></content>
+      <categories>
+        <category>Projects</category>
+      </categories>
+      <tags>
+        <tag>Download</tag>
+        <tag>迅雷</tag>
       </tags>
   </entry>
 </search>
