@@ -1,51 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>better_thunder</title>
-    <url>/2021/12/11/better-thunder/</url>
-    <content><![CDATA[<h1 id="better-thunder"><a href="#better-thunder" class="headerlink" title="better_thunder"></a>better_thunder</h1><p>用Python+Pygame开发的一个迅雷精简工具</p>
-<h3 id="迅雷各插件名及其所代表内容"><a href="#迅雷各插件名及其所代表内容" class="headerlink" title="迅雷各插件名及其所代表内容"></a>迅雷各插件名及其所代表内容</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"> applications    应用页面（删除后顶部无应用 Tab，打不开设置，不建议删除）</span><br><span class="line">   cloudspace    迅雷云盘</span><br><span class="line">browserhelper    浏览器支持</span><br><span class="line">   diagnostic    网络诊断（可以不删除）</span><br><span class="line"> featuredpage    精选页面（删除后顶部无精选 Tab ）</span><br><span class="line">     feedback    意见反馈</span><br><span class="line">   livestream    直播相关</span><br><span class="line">   liveupdate    直播相关</span><br><span class="line">        myvip    会员中心</span><br><span class="line">onethingcloud    玩客云</span><br><span class="line">  preferences    偏好设置（不建议删除）</span><br><span class="line">  softmanager    应用管理（卸载）</span><br><span class="line">     subtitle    内置字幕下载</span><br><span class="line">  thunderword    迅雷世界</span><br><span class="line">    userlogin    用户登录</span><br><span class="line">     viprenew    会员相关（需要会员功能的不要删除，同时也不要删除用户登录插件）</span><br><span class="line">      viptips    会员相关（需要会员功能的不要删除，同时也不要删除用户登录插件）</span><br><span class="line">      webgame    网络游戏</span><br><span class="line">    xlbrowser    内置浏览器（可以不删除）</span><br><span class="line">     xlplayer    迅雷影音</span><br></pre></td></tr></table></figure>
-
-<h3 id="注意"><a href="#注意" class="headerlink" title="! 注意 !"></a>! 注意 !</h3><p>本软件适用于Mac用户，Windows用户请在以下两个网址中下载（果核剥壳yyds）</p>
-<ul>
-<li><a href="https://www.ghxi.com/thunder11green.html">迅雷11</a></li>
-<li><a href="https://www.ghxi.com/thunders.html">ThunderS(迅雷极简融合版)</a></li>
-</ul>
-<h3 id="声明"><a href="#声明" class="headerlink" title="! 声明 !"></a>! 声明 !</h3><p>本软件仅用于学习研究使用, 请于下载后24小时内自行删除<br><img src="https://github.com/itsXZH/better_thunder/blob/main/img/AppIcon.png?raw=true" alt="img"><br><img src="https://github.com/itsXZH/better_thunder/blob/main/Screen%20Shot%201.png?raw=true" alt="img"><br><img src="https://github.com/itsXZH/better_thunder/blob/main/Screen%20Shot%202.png?raw=true" alt="img"></p>
-]]></content>
-      <categories>
-        <category>Projects</category>
-      </categories>
-      <tags>
-        <tag>迅雷</tag>
-        <tag>Download</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2021/12/11/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-      <categories>
-        <category>lead in</category>
-      </categories>
-      <tags>
-        <tag>Hello World</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Motrix-Aria2-Patch</title>
     <url>/2021/12/11/Motrix-Aria2-Patch/</url>
     <content><![CDATA[<h1 id="Motrix-Aria2-Patch"><a href="#Motrix-Aria2-Patch" class="headerlink" title="Motrix-Aria2-Patch"></a>Motrix-Aria2-Patch</h1><h4 id="编译增强版Aria2添加到Motrix中使得下载速度加快"><a href="#编译增强版Aria2添加到Motrix中使得下载速度加快" class="headerlink" title="编译增强版Aria2添加到Motrix中使得下载速度加快"></a>编译增强版Aria2添加到Motrix中使得下载速度加快</h4><hr>
@@ -73,10 +28,58 @@
 <p>好了，按照它的要求一步步地继续就好了！</p>
 <p>最后你会发现Motrix的<strong>连接限制解除了</strong>，<strong>而且不报错了</strong>！！</p>
 ]]></content>
+      <categories>
+        <category>Projects</category>
+      </categories>
       <tags>
-        <tag>Download</tag>
         <tag>Aria2</tag>
         <tag>Motrix</tag>
+        <tag>Download</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>better_thunder</title>
+    <url>/2021/12/11/better-thunder/</url>
+    <content><![CDATA[<h1 id="better-thunder"><a href="#better-thunder" class="headerlink" title="better_thunder"></a>better_thunder</h1><p>用Python+Pygame开发的一个迅雷精简工具</p>
+<h3 id="迅雷各插件名及其所代表内容"><a href="#迅雷各插件名及其所代表内容" class="headerlink" title="迅雷各插件名及其所代表内容"></a>迅雷各插件名及其所代表内容</h3><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line"> applications    应用页面（删除后顶部无应用 Tab，打不开设置，不建议删除）</span><br><span class="line">   cloudspace    迅雷云盘</span><br><span class="line">browserhelper    浏览器支持</span><br><span class="line">   diagnostic    网络诊断（可以不删除）</span><br><span class="line"> featuredpage    精选页面（删除后顶部无精选 Tab ）</span><br><span class="line">     feedback    意见反馈</span><br><span class="line">   livestream    直播相关</span><br><span class="line">   liveupdate    直播相关</span><br><span class="line">        myvip    会员中心</span><br><span class="line">onethingcloud    玩客云</span><br><span class="line">  preferences    偏好设置（不建议删除）</span><br><span class="line">  softmanager    应用管理（卸载）</span><br><span class="line">     subtitle    内置字幕下载</span><br><span class="line">  thunderword    迅雷世界</span><br><span class="line">    userlogin    用户登录</span><br><span class="line">     viprenew    会员相关（需要会员功能的不要删除，同时也不要删除用户登录插件）</span><br><span class="line">      viptips    会员相关（需要会员功能的不要删除，同时也不要删除用户登录插件）</span><br><span class="line">      webgame    网络游戏</span><br><span class="line">    xlbrowser    内置浏览器（可以不删除）</span><br><span class="line">     xlplayer    迅雷影音</span><br></pre></td></tr></table></figure>
+
+<h3 id="注意"><a href="#注意" class="headerlink" title="! 注意 !"></a>! 注意 !</h3><p>本软件适用于Mac用户，Windows用户请在以下两个网址中下载（果核剥壳yyds）</p>
+<ul>
+<li><a href="https://www.ghxi.com/thunder11green.html">迅雷11</a></li>
+<li><a href="https://www.ghxi.com/thunders.html">ThunderS(迅雷极简融合版)</a></li>
+</ul>
+<h3 id="声明"><a href="#声明" class="headerlink" title="! 声明 !"></a>! 声明 !</h3><p>本软件仅用于学习研究使用, 请于下载后24小时内自行删除<br><img src="https://github.com/itsXZH/better_thunder/blob/main/img/AppIcon.png?raw=true" alt="img"><br><img src="https://github.com/itsXZH/better_thunder/blob/main/Screen%20Shot%201.png?raw=true" alt="img"><br><img src="https://github.com/itsXZH/better_thunder/blob/main/Screen%20Shot%202.png?raw=true" alt="img"></p>
+]]></content>
+      <categories>
+        <category>Projects</category>
+      </categories>
+      <tags>
+        <tag>Download</tag>
+        <tag>迅雷</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Hello World</title>
+    <url>/2021/12/11/hello-world/</url>
+    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+
+<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+]]></content>
+      <categories>
+        <category>lead in</category>
+      </categories>
+      <tags>
+        <tag>Hello World</tag>
       </tags>
   </entry>
 </search>
