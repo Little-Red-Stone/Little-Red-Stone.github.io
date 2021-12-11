@@ -945,6 +945,13 @@ pre .javascript .function {
 .darkmode--activated img:hover {
   opacity: 0.9;
 }
+.darkmode--activated code {
+  color: #69dbdc;
+  background: transparent;
+}
+.darkmode--activated .header {
+  background: #fff;
+}
 .container {
   min-height: 100%;
   position: relative;
@@ -1198,7 +1205,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #ff5965;
+  background: #febb6b;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
