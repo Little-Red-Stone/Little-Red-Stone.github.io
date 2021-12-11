@@ -41,6 +41,30 @@
       </tags>
   </entry>
   <entry>
+    <title>PD正确使用方法</title>
+    <url>/2021/12/11/PD%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/</url>
+    <content><![CDATA[<h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><h4 id="之前我是用了-自动操作-制作app来实现-PD-使用时间到期后的无限使用"><a href="#之前我是用了-自动操作-制作app来实现-PD-使用时间到期后的无限使用" class="headerlink" title="之前我是用了 自动操作 制作app来实现 PD 使用时间到期后的无限使用"></a>之前我是用了 <code>自动操作</code> 制作app来实现 <code>PD</code> <strong>使用时间到期后</strong>的无限使用</h4><p>如有兴趣的话可以看看这篇文章 <a href="https://segmentfault.com/a/1190000040690683">如何正确使用Parallels Desktop（全网最细）</a></p>
+<h4 id="但现在，不得不为国内的开发者竖起大拇指！！"><a href="#但现在，不得不为国内的开发者竖起大拇指！！" class="headerlink" title="但现在，不得不为国内的开发者竖起大拇指！！"></a>但现在，不得不为国内的开发者<strong>竖起大拇指！！</strong></h4><p><em>(因为TNT团队更新的不及时）</em> 有人已经开发出了 <code>PD</code> 的启动工具，名为 <code>PD-Runner</code> </p>
+<h2 id="功能简介"><a href="#功能简介" class="headerlink" title="功能简介"></a>功能简介</h2><p>适用于 <code>Parallels Desktop</code> 的启动器, 可以<strong>无视试用期限</strong>强制启动客户机 <em>(支持 PD17.1.0)</em><br>A tool for <code>Parallels Desktop</code> can start VMs <strong>even expired</strong> <em>(Support for PD17.1.0 or earlier)</em></p>
+<h3 id="使用-Usage"><a href="#使用-Usage" class="headerlink" title="使用 Usage"></a>使用 Usage</h3><p><code>PD Runner</code> 是一个菜单栏APP, 启动后会在菜单栏显示程序图标. 点击菜单栏图标可列出当前Mac上安装的所有客户机, 然后点击客户机名称即可启动对应的客户机.<br><code>PD Runner</code> will show an icon in the menu bar. Click menubar icon to list all the VMs on your Mac, and click the name to start your VM.</p>
+<h3 id="截图-Screenshot"><a href="#截图-Screenshot" class="headerlink" title="截图 Screenshot"></a>截图 Screenshot</h3><p><img src="https://github.com/lihaoyun6/PD-Runner/raw/main/img/Screenshot.png" alt="Screenshot.png"></p>
+<h4 id="感谢-lihaoyun6-的开发！源代码已开源"><a href="#感谢-lihaoyun6-的开发！源代码已开源" class="headerlink" title="感谢 lihaoyun6 的开发！源代码已开源"></a>感谢 <code>lihaoyun6</code> 的开发！<em>源代码已开源</em></h4><ul>
+<li><a href="https://github.com/lihaoyun6/PD-Runner">Github仓库链接</a></li>
+<li><a href="https://github.com/lihaoyun6/PD-Runner/releases">Github官方下载地址</a></li>
+</ul>
+<h2 id="视频教程"><a href="#视频教程" class="headerlink" title="视频教程"></a>视频教程</h2><iframe src="//player.bilibili.com/player.html?aid=718124956&bvid=BV1yQ4y1k7W8&cid=409893958&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p><img src="https://github.com/lihaoyun6/PD-Runner/raw/main/img/PDrunner.png" alt="PD Runner.png"><br><strong>官方适配的 <code>PD</code> 和 <code>PD Runner</code> 的 <code>BigSur</code> 图标下载地址</strong>：<a href="http://www.123pan.com/s/motA-8O6Rv">123网盘</a></p>
+<h3 id="声明：本项目仅用于学习研究使用-请支持正版"><a href="#声明：本项目仅用于学习研究使用-请支持正版" class="headerlink" title="声明：本项目仅用于学习研究使用, 请支持正版!"></a>声明：本项目仅用于学习研究使用, 请支持正版!</h3>]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>虚拟机</tag>
+        <tag>Parallels Desktop</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>better_thunder</title>
     <url>/2021/12/11/better-thunder/</url>
     <content><![CDATA[<h1 id="better-thunder"><a href="#better-thunder" class="headerlink" title="better_thunder"></a>better_thunder</h1><p>用Python+Pygame开发的一个迅雷精简工具</p>
