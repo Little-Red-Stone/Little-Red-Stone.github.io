@@ -20,30 +20,46 @@
     var CONFIG = {"hostname":"little-red-stone.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":false,"show_result":false,"style":null},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
   </script>
 
-  <meta name="description" content="一名上海的学生党">
-<meta property="og:type" content="website">
-<meta property="og:title" content="XuZiHao的小站">
-<meta property="og:url" content="https://little-red-stone.github.io/index.html">
+  <meta name="description" content="继  BetterIntelliJ 和  jetbrains-agent 之后，  FineAgent，ide-eval-resetter 这两个项目也停止了 来自 FineAgent 作者的解释  至于停止的原因，有很多，抛开来自外部的压力不谈，就FineAgent这个补丁本身来说，它只是一个冲动下的产物，并不完善，距离前辈们的补丁还是有一定差距，首当其冲的就是它无法激活插件，尤其在idea20">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Jetbrains系列产品最新激活方式">
+<meta property="og:url" content="https://little-red-stone.github.io/2021/12/12/Jetbrains%E7%B3%BB%E5%88%97%E4%BA%A7%E5%93%81%E6%9C%80%E6%96%B0%E6%BF%80%E6%B4%BB%E6%96%B9%E5%BC%8F/index.html">
 <meta property="og:site_name" content="XuZiHao的小站">
-<meta property="og:description" content="一名上海的学生党">
+<meta property="og:description" content="继  BetterIntelliJ 和  jetbrains-agent 之后，  FineAgent，ide-eval-resetter 这两个项目也停止了 来自 FineAgent 作者的解释  至于停止的原因，有很多，抛开来自外部的压力不谈，就FineAgent这个补丁本身来说，它只是一个冲动下的产物，并不完善，距离前辈们的补丁还是有一定差距，首当其冲的就是它无法激活插件，尤其在idea20">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://little-red-stone.github.io/2021/12/12/Jetbrains%E7%B3%BB%E5%88%97%E4%BA%A7%E5%93%81%E6%9C%80%E6%96%B0%E6%BF%80%E6%B4%BB%E6%96%B9%E5%BC%8F/media/16392986836065.jpg">
+<meta property="og:image" content="https://little-red-stone.github.io/2021/12/12/Jetbrains%E7%B3%BB%E5%88%97%E4%BA%A7%E5%93%81%E6%9C%80%E6%96%B0%E6%BF%80%E6%B4%BB%E6%96%B9%E5%BC%8F/media/16392988459390.jpg">
+<meta property="og:image" content="https://little-red-stone.github.io/2021/12/12/Jetbrains%E7%B3%BB%E5%88%97%E4%BA%A7%E5%93%81%E6%9C%80%E6%96%B0%E6%BF%80%E6%B4%BB%E6%96%B9%E5%BC%8F/media/16392990989818.jpg">
+<meta property="og:image" content="https://little-red-stone.github.io/2021/12/12/Jetbrains%E7%B3%BB%E5%88%97%E4%BA%A7%E5%93%81%E6%9C%80%E6%96%B0%E6%BF%80%E6%B4%BB%E6%96%B9%E5%BC%8F/media/16392992089296.jpg">
+<meta property="og:image" content="https://little-red-stone.github.io/2021/12/12/Jetbrains%E7%B3%BB%E5%88%97%E4%BA%A7%E5%93%81%E6%9C%80%E6%96%B0%E6%BF%80%E6%B4%BB%E6%96%B9%E5%BC%8F/media/16392992788537.jpg">
+<meta property="og:image" content="https://little-red-stone.github.io/2021/12/12/Jetbrains%E7%B3%BB%E5%88%97%E4%BA%A7%E5%93%81%E6%9C%80%E6%96%B0%E6%BF%80%E6%B4%BB%E6%96%B9%E5%BC%8F/media/16392995563537.jpg">
+<meta property="og:image" content="https://little-red-stone.github.io/2021/12/12/Jetbrains%E7%B3%BB%E5%88%97%E4%BA%A7%E5%93%81%E6%9C%80%E6%96%B0%E6%BF%80%E6%B4%BB%E6%96%B9%E5%BC%8F/media/16392998894356.jpg">
+<meta property="og:image" content="https://little-red-stone.github.io/2021/12/12/Jetbrains%E7%B3%BB%E5%88%97%E4%BA%A7%E5%93%81%E6%9C%80%E6%96%B0%E6%BF%80%E6%B4%BB%E6%96%B9%E5%BC%8F/media/16393004609063.jpg">
+<meta property="og:image" content="https://little-red-stone.github.io/2021/12/12/Jetbrains%E7%B3%BB%E5%88%97%E4%BA%A7%E5%93%81%E6%9C%80%E6%96%B0%E6%BF%80%E6%B4%BB%E6%96%B9%E5%BC%8F/media/16393005498617.jpg">
+<meta property="article:published_time" content="2021-12-12T06:39:44.000Z">
+<meta property="article:modified_time" content="2021-12-12T09:21:06.153Z">
 <meta property="article:author" content="Little-Red-Stone">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="C++">
+<meta property="article:tag" content="JetBrains">
+<meta property="article:tag" content="App">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://little-red-stone.github.io/2021/12/12/Jetbrains%E7%B3%BB%E5%88%97%E4%BA%A7%E5%93%81%E6%9C%80%E6%96%B0%E6%BF%80%E6%B4%BB%E6%96%B9%E5%BC%8F/media/16392986836065.jpg">
 
-<link rel="canonical" href="https://little-red-stone.github.io/">
+<link rel="canonical" href="https://little-red-stone.github.io/2021/12/12/Jetbrains%E7%B3%BB%E5%88%97%E4%BA%A7%E5%93%81%E6%9C%80%E6%96%B0%E6%BF%80%E6%B4%BB%E6%96%B9%E5%BC%8F/">
 
 
 <script id="page-configurations">
   // https://hexo.io/docs/variables.html
   CONFIG.page = {
     sidebar: "",
-    isHome : true,
-    isPost : false,
+    isHome : false,
+    isPost : true,
     lang   : 'zh-CN'
   };
 </script>
 
-  <title>XuZiHao的小站</title>
+  <title>Jetbrains系列产品最新激活方式 | XuZiHao的小站</title>
   
 
 
@@ -180,9 +196,10 @@
         <div class="content-wrap">
           
 
-          <div class="content index posts-expand">
+          <div class="content post posts-expand">
             
-      
+
+    
   
   
   <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
@@ -198,10 +215,9 @@
       <meta itemprop="name" content="XuZiHao的小站">
     </span>
       <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/12/12/Jetbrains%E7%B3%BB%E5%88%97%E4%BA%A7%E5%93%81%E6%9C%80%E6%96%B0%E6%BF%80%E6%B4%BB%E6%96%B9%E5%BC%8F/" class="post-title-link" itemprop="url">Jetbrains系列产品最新激活方式</a>
-        </h2>
+        <h1 class="post-title" itemprop="name headline">
+          Jetbrains系列产品最新激活方式
+        </h1>
 
         <div class="post-meta">
             <span class="post-meta-item">
@@ -234,7 +250,7 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>继  <code>BetterIntelliJ</code> 和  <code>jetbrains-agent</code> 之后，  <code>FineAgent</code>，<code>ide-eval-resetter</code> 这两个项目也停止了</p>
+        <p>继  <code>BetterIntelliJ</code> 和  <code>jetbrains-agent</code> 之后，  <code>FineAgent</code>，<code>ide-eval-resetter</code> 这两个项目也停止了</p>
 <p>来自 <code>FineAgent</code> 作者的解释</p>
 <blockquote>
 <p>至于停止的原因，有很多，抛开来自外部的压力不谈，就<a target="_blank" rel="noopener" href="https://www.jiweichengzhu.com/article/6df4ae9141e0417c86eeceb7adb84100">FineAgent</a>这个补丁本身来说，它只是一个冲动下的产物，并不完善，距离前辈们的补丁还是有一定差距，首当其冲的就是它无法激活插件，尤其在<a target="_blank" rel="noopener" href="https://www.jiweichengzhu.com/article/6fe36c02159d4925a1223b426dbfc71d">idea2021.3</a>版本发布之后，很多人私信我，<a target="_blank" rel="noopener" href="https://www.jiweichengzhu.com/topic/85dab3064dff41198b5a02d164e2d6c3">idea</a>插件该如何激活？<br>每当此时，我都会有一种深深的无力感，感慨自己为何没有沉下心来深入研究学习，为此甚至有那么一丝丝的愧疚感，基于多重考量，最终我决定停止<a target="_blank" rel="noopener" href="https://www.jiweichengzhu.com/article/6df4ae9141e0417c86eeceb7adb84100">FineAgent</a>这个项目，以此事为鉴，在以后的工作和学习中，务必要静下心来，做事情再也不要流于表面。</p>
@@ -273,398 +289,36 @@
 <h2 id="6-重启Pycharm，加载-ja-netfilter-插件"><a href="#6-重启Pycharm，加载-ja-netfilter-插件" class="headerlink" title="6. 重启Pycharm，加载 ja-netfilter 插件"></a>6. 重启Pycharm，加载 <code>ja-netfilter</code> 插件</h2><p><img src="media/16393005498617.jpg"></p>
 <p>搞定收工，zhile猛如虎！！！<br>有兴趣的同学可以看看zhile自己写的文章: <a target="_blank" rel="noopener" href="https://zhile.io/2021/11/29/ja-netfilter-javaagent-lib.html">传送门</a></p>
 
-      
     </div>
 
     
     
     
+
       <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
+          <div class="post-tags">
+              <a href="/tags/Python/" rel="tag"># Python</a>
+              <a href="/tags/C/" rel="tag"># C++</a>
+              <a href="/tags/JetBrains/" rel="tag"># JetBrains</a>
+              <a href="/tags/App/" rel="tag"># App</a>
+          </div>
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://little-red-stone.github.io/2021/12/11/Jetbrains%E7%B3%BB%E5%88%97%E4%BA%A7%E5%93%81%E9%87%8D%E7%BD%AE%E8%AF%95%E7%94%A8%E6%96%B9%E6%B3%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="Little-Red-Stone">
-      <meta itemprop="description" content="一名上海的学生党">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="XuZiHao的小站">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/12/11/Jetbrains%E7%B3%BB%E5%88%97%E4%BA%A7%E5%93%81%E9%87%8D%E7%BD%AE%E8%AF%95%E7%94%A8%E6%96%B9%E6%B3%95/" class="post-title-link" itemprop="url">Jetbrains系列产品重置试用方法</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-12-11 21:30:15 / 修改时间：21:36:30" itemprop="dateCreated datePublished" datetime="2021-12-11T21:30:15+08:00">2021-12-11</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">教程</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p><strong>本站惯例：本文假定你知道Jetbrains家的产品。不知道可以问问搜索引擎。</strong></p>
-<p>没错，<code>jetbrains-agent</code>这个项目停止了。市面上漫天飞的各种最新都是其他大神的魔改版本。[/斜眼]<br>我不是要专门写个博文来说明<code>jetbrains-agent</code>项目已经停止，然后缅怀感叹一番。这篇文章是想和大家聊聊<strong>另一种思路</strong>。</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/12/11/Jetbrains%E7%B3%BB%E5%88%97%E4%BA%A7%E5%93%81%E9%87%8D%E7%BD%AE%E8%AF%95%E7%94%A8%E6%96%B9%E6%B3%95/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
-    </div>
 
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
 
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://little-red-stone.github.io/2021/12/11/PD%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="Little-Red-Stone">
-      <meta itemprop="description" content="一名上海的学生党">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="XuZiHao的小站">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/12/11/PD%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/" class="post-title-link" itemprop="url">PD正确使用方法</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-12-11 21:14:03 / 修改时间：21:36:26" itemprop="dateCreated datePublished" datetime="2021-12-11T21:14:03+08:00">2021-12-11</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">教程</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><h4 id="之前我是用了-自动操作-制作app来实现-PD-使用时间到期后的无限使用"><a href="#之前我是用了-自动操作-制作app来实现-PD-使用时间到期后的无限使用" class="headerlink" title="之前我是用了 自动操作 制作app来实现 PD 使用时间到期后的无限使用"></a>之前我是用了 <code>自动操作</code> 制作app来实现 <code>PD</code> <strong>使用时间到期后</strong>的无限使用</h4><p>如有兴趣的话可以看看这篇文章 <a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000040690683">如何正确使用Parallels Desktop（全网最细）</a></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/12/11/PD%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
         
-      
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/2021/12/11/Jetbrains%E7%B3%BB%E5%88%97%E4%BA%A7%E5%93%81%E9%87%8D%E7%BD%AE%E8%AF%95%E7%94%A8%E6%96%B9%E6%B3%95/" rel="prev" title="Jetbrains系列产品重置试用方法">
+      <i class="fa fa-chevron-left"></i> Jetbrains系列产品重置试用方法
+    </a></div>
+      <div class="post-nav-item"></div>
     </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
       </footer>
+    
   </article>
   
   
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://little-red-stone.github.io/2021/12/11/Motrix-Aria2-Patch/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="Little-Red-Stone">
-      <meta itemprop="description" content="一名上海的学生党">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="XuZiHao的小站">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/12/11/Motrix-Aria2-Patch/" class="post-title-link" itemprop="url">Motrix-Aria2-Patch</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-12-11 19:54:48 / 修改时间：20:50:24" itemprop="dateCreated datePublished" datetime="2021-12-11T19:54:48+08:00">2021-12-11</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Projects/" itemprop="url" rel="index"><span itemprop="name">Projects</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="Motrix-Aria2-Patch"><a href="#Motrix-Aria2-Patch" class="headerlink" title="Motrix-Aria2-Patch"></a>Motrix-Aria2-Patch</h1><h4 id="编译增强版Aria2添加到Motrix中使得下载速度加快"><a href="#编译增强版Aria2添加到Motrix中使得下载速度加快" class="headerlink" title="编译增强版Aria2添加到Motrix中使得下载速度加快"></a>编译增强版Aria2添加到Motrix中使得下载速度加快</h4><p><a target="_blank" rel="noopener" href="https://github.com/Little-Red-Stone/Motrix-Aria2-Patch">GitHub链接</a></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/12/11/Motrix-Aria2-Patch/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://little-red-stone.github.io/2021/12/11/better-thunder/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="Little-Red-Stone">
-      <meta itemprop="description" content="一名上海的学生党">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="XuZiHao的小站">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/12/11/better-thunder/" class="post-title-link" itemprop="url">better_thunder</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-12-11 16:13:32 / 修改时间：21:03:24" itemprop="dateCreated datePublished" datetime="2021-12-11T16:13:32+08:00">2021-12-11</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Projects/" itemprop="url" rel="index"><span itemprop="name">Projects</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <h1 id="better-thunder"><a href="#better-thunder" class="headerlink" title="better_thunder"></a>better_thunder</h1><p>用Python+Pygame开发的一个迅雷精简工具</p>
-<p><a target="_blank" rel="noopener" href="https://github.com/Little-Red-Stone/better_thunder">GitHub链接</a></p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/12/11/better-thunder/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-      
-  
-  
-  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
-    <link itemprop="mainEntityOfPage" href="https://little-red-stone.github.io/2021/12/11/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="image" content="/images/avatar.png">
-      <meta itemprop="name" content="Little-Red-Stone">
-      <meta itemprop="description" content="一名上海的学生党">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="XuZiHao的小站">
-    </span>
-      <header class="post-header">
-        <h2 class="post-title" itemprop="name headline">
-          
-            <a href="/2021/12/11/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-        </h2>
-
-        <div class="post-meta">
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-calendar"></i>
-              </span>
-              <span class="post-meta-item-text">发表于</span>
-              
-
-              <time title="创建时间：2021-12-11 14:19:00 / 修改时间：20:48:49" itemprop="dateCreated datePublished" datetime="2021-12-11T14:19:00+08:00">2021-12-11</time>
-            </span>
-            <span class="post-meta-item">
-              <span class="post-meta-item-icon">
-                <i class="far fa-folder"></i>
-              </span>
-              <span class="post-meta-item-text">分类于</span>
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/lead-in/" itemprop="url" rel="index"><span itemprop="name">lead in</span></a>
-                </span>
-            </span>
-
-          
-
-        </div>
-      </header>
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-          <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-          <!--noindex-->
-            <div class="post-button">
-              <a class="btn" href="/2021/12/11/hello-world/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-    
-    
-      <footer class="post-footer">
-        <div class="post-eof"></div>
-      </footer>
-  </article>
-  
-  
-  
-
-
   
 
 
@@ -717,6 +371,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A5%BD%E4%BA%86%EF%BC%8C%E7%8E%B0%E5%9C%A8%E6%AD%A5%E5%85%A5%E6%88%91%E4%BB%AC%E7%9A%84%E4%B8%BB%E9%A2%98"><span class="nav-number">1.</span> <span class="nav-text">好了，现在步入我们的主题</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9C%80%E6%96%B0%E7%89%88%E7%9A%84JetBrians%E7%B3%BB%E4%BA%A7%E5%93%81%E5%A6%82%E4%BD%95%E6%BF%80%E6%B4%BB%EF%BC%9F"><span class="nav-number"></span> <span class="nav-text">最新版的JetBrians系产品如何激活？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#tips-%E5%A6%82%E6%9E%9C%E5%AE%89%E8%A3%85%E8%BF%87%E6%97%A0%E9%99%90%E8%AF%95%E7%94%A8%E3%80%81%E4%BF%AE%E6%94%B9%E8%BF%87-hosts-%E8%AF%B7%E5%85%88%E5%8D%B8%E8%BD%BD%E5%B9%B2%E5%87%80%E6%97%A7%E7%89%88%E6%9C%AC%E5%86%8D%E5%AE%89%E8%A3%85%EF%BC%8C%E5%90%A6%E9%9C%80%E6%97%A0%E6%B3%95%E6%BF%80%E6%B4%BB%EF%BC%81"><span class="nav-number"></span> <span class="nav-text">tips: 如果安装过无限试用、修改过 hosts 请先卸载干净旧版本再安装，否需无法激活！</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%AC%E6%96%87%E4%BB%A5Pycharm%E4%B8%BA%E4%BE%8B%EF%BC%8C%E5%85%B6%E4%BB%96JetBrains%E8%BD%AF%E4%BB%B6%E9%83%BD%E6%98%AF%E5%8F%AF%E4%BB%A5%E7%9A%84"><span class="nav-number">1.</span> <span class="nav-text">本文以Pycharm为例，其他JetBrains软件都是可以的</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E8%8E%B7%E5%8F%96ja-netfilter%E6%96%87%E4%BB%B6%EF%BC%88%E4%BB%BB%E9%80%89%E5%85%B6%E4%B8%80%EF%BC%89"><span class="nav-number"></span> <span class="nav-text">1. 获取ja-netfilter文件（任选其一）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E7%A7%BB%E9%99%A4%E4%B9%8B%E5%89%8D%E5%8C%85%E6%8B%AC-FineAgent-%E5%9C%A8%E5%86%85%E7%9A%84%E6%89%80%E6%9C%89%E8%A1%A5%E4%B8%81%EF%BC%88%E5%BF%85%E9%A1%BB%EF%BC%89"><span class="nav-number"></span> <span class="nav-text">2. 移除之前包括 FineAgent 在内的所有补丁（必须）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E8%8E%B7%E5%8F%96%E7%9F%AD%E6%9C%9F%E6%AD%A3%E7%89%88%E6%BF%80%E6%B4%BB%E7%A0%81"><span class="nav-number"></span> <span class="nav-text">3. 获取短期正版激活码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E5%BC%95%E5%85%A5ja-netfilter%E6%8F%92%E4%BB%B6"><span class="nav-number"></span> <span class="nav-text">4. 引入ja-netfilter插件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E5%9C%A8janf-config-txt%E6%96%87%E4%BB%B6%E4%B8%AD%E9%85%8D%E7%BD%AE%E4%BF%A1%E6%81%AF"><span class="nav-number"></span> <span class="nav-text">5. 在janf_config.txt文件中配置信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-%E9%87%8D%E5%90%AFPycharm%EF%BC%8C%E5%8A%A0%E8%BD%BD-ja-netfilter-%E6%8F%92%E4%BB%B6"><span class="nav-number"></span> <span class="nav-text">6. 重启Pycharm，加载 ja-netfilter 插件</span></a></div>
       </div>
       <!--/noindex-->
 
