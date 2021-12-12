@@ -289,4 +289,16 @@
         <tag>Hello World</tag>
       </tags>
   </entry>
+  <entry>
+    <title>test</title>
+    <url>/2021/12/12/test/</url>
+    <content><![CDATA[<h1 id="This-is-a-pictrue-test-file"><a href="#This-is-a-pictrue-test-file" class="headerlink" title="This is a pictrue test file"></a>This is a pictrue test file</h1><p><img src="/2021/12/12/test/1.png"></p>
+]]></content>
+      <categories>
+        <category>lead in</category>
+      </categories>
+      <tags>
+        <tag>test</tag>
+      </tags>
+  </entry>
 </search>
