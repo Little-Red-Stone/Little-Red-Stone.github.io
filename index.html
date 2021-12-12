@@ -211,7 +211,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-12-12 14:39:44 / 修改时间：17:21:06" itemprop="dateCreated datePublished" datetime="2021-12-12T14:39:44+08:00">2021-12-12</time>
+              <time title="创建时间：2021-12-12 14:39:44 / 修改时间：17:29:30" itemprop="dateCreated datePublished" datetime="2021-12-12T14:39:44+08:00">2021-12-12</time>
             </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -240,39 +240,15 @@
 <p>至于停止的原因，有很多，抛开来自外部的压力不谈，就<a target="_blank" rel="noopener" href="https://www.jiweichengzhu.com/article/6df4ae9141e0417c86eeceb7adb84100">FineAgent</a>这个补丁本身来说，它只是一个冲动下的产物，并不完善，距离前辈们的补丁还是有一定差距，首当其冲的就是它无法激活插件，尤其在<a target="_blank" rel="noopener" href="https://www.jiweichengzhu.com/article/6fe36c02159d4925a1223b426dbfc71d">idea2021.3</a>版本发布之后，很多人私信我，<a target="_blank" rel="noopener" href="https://www.jiweichengzhu.com/topic/85dab3064dff41198b5a02d164e2d6c3">idea</a>插件该如何激活？<br>每当此时，我都会有一种深深的无力感，感慨自己为何没有沉下心来深入研究学习，为此甚至有那么一丝丝的愧疚感，基于多重考量，最终我决定停止<a target="_blank" rel="noopener" href="https://www.jiweichengzhu.com/article/6df4ae9141e0417c86eeceb7adb84100">FineAgent</a>这个项目，以此事为鉴，在以后的工作和学习中，务必要静下心来，做事情再也不要流于表面。</p>
 </blockquote>
 <p>所以，既然如此多大佬开发的插件无法使用时，我们该如何破解呢？</p>
-<h4 id="好了，现在步入我们的主题"><a href="#好了，现在步入我们的主题" class="headerlink" title="好了，现在步入我们的主题"></a>好了，现在步入我们的主题</h4><h1 id="最新版的JetBrians系产品如何激活？"><a href="#最新版的JetBrians系产品如何激活？" class="headerlink" title="最新版的JetBrians系产品如何激活？"></a>最新版的JetBrians系产品如何激活？</h1><h3 id="tips-如果安装过无限试用、修改过-hosts-请先卸载干净旧版本再安装，否需无法激活！"><a href="#tips-如果安装过无限试用、修改过-hosts-请先卸载干净旧版本再安装，否需无法激活！" class="headerlink" title="tips: 如果安装过无限试用、修改过 hosts 请先卸载干净旧版本再安装，否需无法激活！"></a>tips: 如果安装过无限试用、修改过 hosts 请先卸载干净旧版本再安装，否需无法激活！</h3><h4 id="本文以Pycharm为例，其他JetBrains软件都是可以的"><a href="#本文以Pycharm为例，其他JetBrains软件都是可以的" class="headerlink" title="本文以Pycharm为例，其他JetBrains软件都是可以的"></a>本文以Pycharm为例，其他JetBrains软件都是可以的</h4><p>在自动重置试用期脚本被Jetbrains官方反制之后，Z大又紧急推出了一款通用的开源插件ja-netfilter，见名知意，是一个网络过滤器，此款插件可以同时做到激活idea、激活插件、自定义激活时间长短、自定义LicenseName，怎么样，我称其为最灵活不为过吧？</p>
-<p>噼里啪啦说了这么多，有人可能还没明白ja-netfilter牛在哪里，这不就是跟FineAgent一样的效果吗？别着急，我们来看几张图。<br><img src="/2021/12/12/Jetbrains%E7%B3%BB%E5%88%97%E4%BA%A7%E5%93%81%E6%9C%80%E6%96%B0%E6%BF%80%E6%B4%BB%E6%96%B9%E5%BC%8F/16392986836065.jpg"></p>
-<p><img src="/2021/12/12/Jetbrains%E7%B3%BB%E5%88%97%E4%BA%A7%E5%93%81%E6%9C%80%E6%96%B0%E6%BF%80%E6%B4%BB%E6%96%B9%E5%BC%8F/16392988459390.jpg"></p>
-<p>这几张图是不是就印证了我上面提到了ja-netfilter的几项功能，现在我再说它最灵活，不为过吧？</p>
-<p>不得不感慨，Z大真是猛如虎，我只考虑到了一个点，他直接考虑一个面，确实nb，现在来教大家如何使用这个东西。</p>
-<h2 id="1-获取ja-netfilter文件（任选其一）"><a href="#1-获取ja-netfilter文件（任选其一）" class="headerlink" title="1. 获取ja-netfilter文件（任选其一）"></a>1. 获取ja-netfilter文件（任选其一）</h2><ol>
-<li>去<code>ja-netfilter</code>的<a target="_blank" rel="noopener" href="https://github.com/ja-netfilter/ja-netfilter/releases">github</a>上下载作者打好的release包；</li>
-<li>获取<a target="_blank" rel="noopener" href="https://github.com/ja-netfilter/ja-netfilter"><code>ja-netfilter</code></a>代码，在本地编译打包；</li>
-</ol>
-<p><img src="/2021/12/12/Jetbrains%E7%B3%BB%E5%88%97%E4%BA%A7%E5%93%81%E6%9C%80%E6%96%B0%E6%BF%80%E6%B4%BB%E6%96%B9%E5%BC%8F/16392990989818.jpg"></p>
-<p>如上图，<code>ja-netfilter.jar</code>是插件核心所在，而<code>janf_config.txt</code>则是用来配置上面说的LicenseName之类的信息。（提示：需要自己创建）</p>
-<h2 id="2-移除之前包括-FineAgent-在内的所有补丁（必须）"><a href="#2-移除之前包括-FineAgent-在内的所有补丁（必须）" class="headerlink" title="2. 移除之前包括 FineAgent 在内的所有补丁（必须）"></a>2. 移除之前包括 <code>FineAgent</code> 在内的所有补丁（必须）</h2><p><img src="/2021/12/12/Jetbrains%E7%B3%BB%E5%88%97%E4%BA%A7%E5%93%81%E6%9C%80%E6%96%B0%E6%BF%80%E6%B4%BB%E6%96%B9%E5%BC%8F/16392992089296.jpg"><br><img src="/2021/12/12/Jetbrains%E7%B3%BB%E5%88%97%E4%BA%A7%E5%93%81%E6%9C%80%E6%96%B0%E6%BF%80%E6%B4%BB%E6%96%B9%E5%BC%8F/16392992788537.jpg"></p>
-<p>这一步看起来很简单，但很多人都在这里吃了亏，删除补丁了之后，这里务必要删除或者注释掉，否则idea会启动不了了。</p>
-<h2 id="3-获取短期正版激活码"><a href="#3-获取短期正版激活码" class="headerlink" title="3. 获取短期正版激活码"></a>3. 获取短期正版激活码</h2><p>在<a target="_blank" rel="noopener" href="https://jetbra.in/test-7b06e3ddfa68ff9b483adfcd08cdd243831f7928.html?t=16018385822">jetbra.in</a>获取激活码，注意是正版哦，无需补丁，直接填进去就可以激活的那种。<br><img src="/2021/12/12/Jetbrains%E7%B3%BB%E5%88%97%E4%BA%A7%E5%93%81%E6%9C%80%E6%96%B0%E6%BF%80%E6%B4%BB%E6%96%B9%E5%BC%8F/16392995563537.jpg"></p>
-<p>如上图，可以看到这是一个短期的激活码，到2022.1.7号就过期了，但是它不需要任何补丁，填进去就能直接用，可能大家有疑惑了，这马上就到2022.1.7号了，岂不是马上就要过期了？别急，我们继续往下看。</p>
-<h2 id="4-引入ja-netfilter插件"><a href="#4-引入ja-netfilter插件" class="headerlink" title="4. 引入ja-netfilter插件"></a>4. 引入ja-netfilter插件</h2><p>这个-javaagent的配置就不用我多说了吧，跟以往的一些agent用法一模一样:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-javaagent:&lt;你的保存位置&gt;</span><br></pre></td></tr></table></figure>
-<p>比如我的:</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-javaagent:/Users/xzh/Downloads/JetbrainsCrack/ja-netfilter/ja-netfilter.jar</span><br></pre></td></tr></table></figure>
-<p><img src="/2021/12/12/Jetbrains%E7%B3%BB%E5%88%97%E4%BA%A7%E5%93%81%E6%9C%80%E6%96%B0%E6%BF%80%E6%B4%BB%E6%96%B9%E5%BC%8F/16392998894356.jpg"></p>
-<h2 id="5-在janf-config-txt文件中配置信息"><a href="#5-在janf-config-txt文件中配置信息" class="headerlink" title="5. 在janf_config.txt文件中配置信息"></a>5. 在janf_config.txt文件中配置信息</h2><p>文章开头处已经说过了，ja-netfilter是一个网络过滤器，你可以把它看做是一个网络阻断器更为合适，结合这配置文件内容，大家应该好理解第三步的疑问了吧，你激活码过期又如何？我阻断网络校验，从中作梗让它一直校验不成功，变相的让Jetbrains认为我的激活码一直还是有效的，这思路绝了。</p>
-<p>配置文件中的dns和url都是直指Jetbrains的网站和请求，至于匹配符equal和prefix，字面意思也好理解，这些大家可以直接去<a target="_blank" rel="noopener" href="https://github.com/ja-netfilter/ja-netfilter">github</a>上看，Z大写的非常详细。</p>
-<p>这里给出一个 <code>janf_config.txt</code> 配置（当然你可以根据后文自行修改）：</p>
-<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[DNS]</span><br><span class="line">EQUAL,jetbrains.com</span><br><span class="line">[URL]</span><br><span class="line">PREFIX,<span class="symbol">https:</span>/<span class="regexp">/account.jetbrains.com/lservice</span><span class="regexp">/rpc/validate</span>Key.action</span><br><span class="line">[MyMap]</span><br><span class="line">EQUAL,licenseeName-&gt;穷则独善其身，达则兼济天下。 ————《孟子·尽心上》</span><br><span class="line">EQUAL,gracePeriodDays-&gt;<span class="number">30</span></span><br><span class="line">EQUAL,paidUpTo-&gt;<span class="number">9999</span>-<span class="number">12</span>-<span class="number">31</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>注意:我们重点看一下 <code>MyMap</code> 这个配置项，这个非常重要（下载链接我放在下面了），如果缺少了它，并不会影响 <code>ja-netfilter</code> 的使用，只是你将无法灵活定义Pycharm的一些激活信息，这个plugin是在一开始是没有在 <code>ja-netfilter</code> 中的，后来由热心大佬给补上了，实在是给力。</li>
-<li>格式<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">licenseeName：被许可人姓名，也就是Licensed to xxx里的xxx信息；</span><br><span class="line">gracePeriodDays：宽限期；</span><br><span class="line">paidUpTo：激活的时长，也就是熟悉的2099-12-31的配置；</span><br></pre></td></tr></table></figure></li>
-<li>下载地址: <a target="_blank" rel="noopener" href="https://www.123pan.com/s/motA-zO6Rv">123云盘</a></li>
-</ul>
-<p>这个mymap本身并不能直接使用，而是作为ja-netfilter的一个plugin存在，如下图所示。<br><img src="/2021/12/12/Jetbrains%E7%B3%BB%E5%88%97%E4%BA%A7%E5%93%81%E6%9C%80%E6%96%B0%E6%BF%80%E6%B4%BB%E6%96%B9%E5%BC%8F/16393004609063.jpg"></p>
-<h2 id="6-重启Pycharm，加载-ja-netfilter-插件"><a href="#6-重启Pycharm，加载-ja-netfilter-插件" class="headerlink" title="6. 重启Pycharm，加载 ja-netfilter 插件"></a>6. 重启Pycharm，加载 <code>ja-netfilter</code> 插件</h2><p><img src="/2021/12/12/Jetbrains%E7%B3%BB%E5%88%97%E4%BA%A7%E5%93%81%E6%9C%80%E6%96%B0%E6%BF%80%E6%B4%BB%E6%96%B9%E5%BC%8F/16393005498617.jpg"></p>
-<p>搞定收工，zhile猛如虎！！！<br>有兴趣的同学可以看看zhile自己写的文章: <a target="_blank" rel="noopener" href="https://zhile.io/2021/11/29/ja-netfilter-javaagent-lib.html">传送门</a></p>
-
+<h4 id="好了，现在步入我们的主题"><a href="#好了，现在步入我们的主题" class="headerlink" title="好了，现在步入我们的主题"></a>好了，现在步入我们的主题</h4><h1 id="最新版的JetBrians系产品如何激活？"><a href="#最新版的JetBrians系产品如何激活？" class="headerlink" title="最新版的JetBrians系产品如何激活？"></a>最新版的JetBrians系产品如何激活？</h1>
+          <!--noindex-->
+            <div class="post-button">
+              <a class="btn" href="/2021/12/12/Jetbrains%E7%B3%BB%E5%88%97%E4%BA%A7%E5%93%81%E6%9C%80%E6%96%B0%E6%BF%80%E6%B4%BB%E6%96%B9%E5%BC%8F/#more" rel="contents">
+                阅读全文 &raquo;
+              </a>
+            </div>
+          <!--/noindex-->
+        
       
     </div>
 
