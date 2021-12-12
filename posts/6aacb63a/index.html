@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+<meta name="generator" content="Hexo 5.4.0">
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon.ico">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon.ico">
+  <link rel="mask-icon" href="/images/logo.svg" color="#222">
+
+<link rel="stylesheet" href="/css/main.css">
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/all.min.css">
+  <link rel="stylesheet" href="/lib/pace/pace-theme-minimal.min.css">
+  <script src="/lib/pace/pace.min.js"></script>
+
+<script id="hexo-configurations">
+    var NexT = window.NexT || {};
+    var CONFIG = {"hostname":"little-red-stone.github.io","root":"/","scheme":"Pisces","version":"7.8.0","exturl":false,"sidebar":{"position":"left","display":"post","padding":18,"offset":12,"onmobile":false},"copycode":{"enable":true,"show_result":true,"style":"flat"},"back2top":{"enable":true,"sidebar":false,"scrollpercent":true},"bookmark":{"enable":false,"color":"#222","save":"auto"},"fancybox":false,"mediumzoom":false,"lazyload":false,"pangu":false,"comments":{"style":"tabs","active":null,"storage":true,"lazyload":false,"nav":null},"algolia":{"hits":{"per_page":10},"labels":{"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}},"localsearch":{"enable":true,"trigger":"auto","top_n_per_article":1,"unescape":false,"preload":false},"motion":{"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},"path":"search.xml"};
+  </script>
+
+  <meta name="description" content="继  BetterIntelliJ 和  jetbrains-agent 之后，  FineAgent，ide-eval-resetter 这两个项目也停止了 来自 FineAgent 作者的解释  至于停止的原因，有很多，抛开来自外部的压力不谈，就FineAgent这个补丁本身来说，它只是一个冲动下的产物，并不完善，距离前辈们的补丁还是有一定差距，首当其冲的就是它无法激活插件，尤其在idea20">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Jetbrains系列产品最新激活方式">
+<meta property="og:url" content="https://little-red-stone.github.io/posts/6aacb63a/index.html">
+<meta property="og:site_name" content="XuZiHao的小站">
+<meta property="og:description" content="继  BetterIntelliJ 和  jetbrains-agent 之后，  FineAgent，ide-eval-resetter 这两个项目也停止了 来自 FineAgent 作者的解释  至于停止的原因，有很多，抛开来自外部的压力不谈，就FineAgent这个补丁本身来说，它只是一个冲动下的产物，并不完善，距离前辈们的补丁还是有一定差距，首当其冲的就是它无法激活插件，尤其在idea20">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://little-red-stone.github.io/posts/6aacb63a/16392986836065.jpg">
+<meta property="og:image" content="https://little-red-stone.github.io/posts/6aacb63a/16392988459390.jpg">
+<meta property="og:image" content="https://little-red-stone.github.io/posts/6aacb63a/16392990989818.jpg">
+<meta property="og:image" content="https://little-red-stone.github.io/posts/6aacb63a/16392992089296.jpg">
+<meta property="og:image" content="https://little-red-stone.github.io/posts/6aacb63a/16392992788537.jpg">
+<meta property="og:image" content="https://little-red-stone.github.io/posts/6aacb63a/16392995563537.jpg">
+<meta property="og:image" content="https://little-red-stone.github.io/posts/6aacb63a/16392998894356.jpg">
+<meta property="og:image" content="https://little-red-stone.github.io/posts/6aacb63a/16393004609063.jpg">
+<meta property="og:image" content="https://little-red-stone.github.io/posts/6aacb63a/16393005498617.jpg">
+<meta property="article:published_time" content="2021-12-12T06:39:44.000Z">
+<meta property="article:modified_time" content="2021-12-12T15:39:22.490Z">
+<meta property="article:author" content="Little-Red-Stone">
+<meta property="article:tag" content="Python">
+<meta property="article:tag" content="C++">
+<meta property="article:tag" content="JetBrains">
+<meta property="article:tag" content="App">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://little-red-stone.github.io/posts/6aacb63a/16392986836065.jpg">
+
+<link rel="canonical" href="https://little-red-stone.github.io/posts/6aacb63a/">
+
+
+<script id="page-configurations">
+  // https://hexo.io/docs/variables.html
+  CONFIG.page = {
+    sidebar: "",
+    isHome : false,
+    isPost : true,
+    lang   : 'zh-CN'
+  };
+</script>
+
+  <title>Jetbrains系列产品最新激活方式 | XuZiHao的小站</title>
+  
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-header { opacity: initial; }
+
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+<style>.darkmode--activated{--body-bg-color:#282828;--content-bg-color:#333;--card-bg-color:#555;--text-color:#ccc;--blockquote-color:#bbb;--link-color:#ccc;--link-hover-color:#eee;--brand-color:#ddd;--brand-hover-color:#ddd;--table-row-odd-bg-color:#282828;--table-row-hover-bg-color:#363636;--menu-item-bg-color:#555;--btn-default-bg:#222;--btn-default-color:#ccc;--btn-default-border-color:#555;--btn-default-hover-bg:#666;--btn-default-hover-color:#ccc;--btn-default-hover-border-color:#666;--highlight-background:#282b2e;--highlight-foreground:#a9b7c6;--highlight-gutter-background:#34393d;--highlight-gutter-foreground:#9ca9b6}.darkmode--activated img{opacity:.75}.darkmode--activated img:hover{opacity:.9}.darkmode--activated code{color:#69dbdc;background:0 0}button.darkmode-toggle{z-index:9999}</style></head>
+
+<body itemscope itemtype="http://schema.org/WebPage">
+  <div class="container use-motion">
+    <div class="headband"></div>
+
+    <header class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-container">
+  <div class="site-nav-toggle">
+    <div class="toggle" aria-label="切换导航栏">
+      <span class="toggle-line toggle-line-first"></span>
+      <span class="toggle-line toggle-line-middle"></span>
+      <span class="toggle-line toggle-line-last"></span>
+    </div>
+  </div>
+
+  <div class="site-meta">
+
+    <a href="/" class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <h1 class="site-title">XuZiHao的小站</h1>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+      <p class="site-subtitle" itemprop="description">一个技术/资源分享站</p>
+  </div>
+
+  <div class="site-nav-right">
+    <div class="toggle popup-trigger">
+        <i class="fa fa-search fa-fw fa-lg"></i>
+    </div>
+  </div>
+</div>
+
+
+
+
+<nav class="site-nav">
+  <ul id="menu" class="main-menu menu">
+        <li class="menu-item menu-item-home">
+
+    <a href="/" rel="section"><i class="fa fa-home fa-fw"></i>首页</a>
+
+  </li>
+        <li class="menu-item menu-item-tags">
+
+    <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a>
+
+  </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a>
+
+  </li>
+        <li class="menu-item menu-item-archives">
+
+    <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>归档</a>
+
+  </li>
+      <li class="menu-item menu-item-search">
+        <a role="button" class="popup-trigger"><i class="fa fa-search fa-fw"></i>搜索
+        </a>
+      </li>
+  </ul>
+</nav>
+
+
+
+  <div class="search-pop-overlay">
+    <div class="popup search-popup">
+        <div class="search-header">
+  <span class="search-icon">
+    <i class="fa fa-search"></i>
+  </span>
+  <div class="search-input-container">
+    <input autocomplete="off" autocapitalize="off"
+           placeholder="搜索..." spellcheck="false"
+           type="search" class="search-input">
+  </div>
+  <span class="popup-btn-close">
+    <i class="fa fa-times-circle"></i>
+  </span>
+</div>
+<div id="search-result">
+  <div id="no-result">
+    <i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>
+  </div>
+</div>
+
+    </div>
+  </div>
+
+</div>
+    </header>
+
+    
+  <div class="back-to-top">
+    <i class="fa fa-arrow-up"></i>
+    <span>0%</span>
+  </div>
+
+
+    <main class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+
+          <div class="content post posts-expand">
+            
+
+    
+  
+  
+  <article itemscope itemtype="http://schema.org/Article" class="post-block" lang="zh-CN">
+    <link itemprop="mainEntityOfPage" href="https://little-red-stone.github.io/posts/6aacb63a/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="image" content="/images/avatar.png">
+      <meta itemprop="name" content="Little-Red-Stone">
+      <meta itemprop="description" content="一名上海的学生党">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="XuZiHao的小站">
+    </span>
+      <header class="post-header">
+        <h1 class="post-title" itemprop="name headline">
+          Jetbrains系列产品最新激活方式
+        </h1>
+
+        <div class="post-meta">
+
+          
+            <i class="fa fa-thumb-tack"></i>
+            <font color=7D26CD>置顶</font>
+            <span class="post-meta-divider">|</span>
+        
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-calendar"></i>
+              </span>
+              <span class="post-meta-item-text">发表于</span>
+              
+
+              <time title="创建时间：2021-12-12 14:39:44 / 修改时间：23:39:22" itemprop="dateCreated datePublished" datetime="2021-12-12T14:39:44+08:00">2021-12-12</time>
+            </span>
+            <span class="post-meta-item">
+              <span class="post-meta-item-icon">
+                <i class="far fa-folder"></i>
+              </span>
+              <span class="post-meta-item-text">分类于</span>
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/%E6%95%99%E7%A8%8B/" itemprop="url" rel="index"><span itemprop="name">教程</span></a>
+                </span>
+            </span>
+
+          
+  
+  <span class="post-meta-item">
+    
+      <span class="post-meta-item-icon">
+        <i class="far fa-comment"></i>
+      </span>
+      <span class="post-meta-item-text">Valine：</span>
+    
+    <a title="valine" href="/posts/6aacb63a/#valine-comments" itemprop="discussionUrl">
+      <span class="post-comments-count valine-comment-count" data-xid="/posts/6aacb63a/" itemprop="commentCount"></span>
+    </a>
+  </span>
+  
+  
+
+        </div>
+      </header>
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+        <p>继  <code>BetterIntelliJ</code> 和  <code>jetbrains-agent</code> 之后，  <code>FineAgent</code>，<code>ide-eval-resetter</code> 这两个项目也停止了</p>
+<p>来自 <code>FineAgent</code> 作者的解释</p>
+<blockquote>
+<p>至于停止的原因，有很多，抛开来自外部的压力不谈，就<a target="_blank" rel="noopener" href="https://www.jiweichengzhu.com/article/6df4ae9141e0417c86eeceb7adb84100">FineAgent</a>这个补丁本身来说，它只是一个冲动下的产物，并不完善，距离前辈们的补丁还是有一定差距，首当其冲的就是它无法激活插件，尤其在<a target="_blank" rel="noopener" href="https://www.jiweichengzhu.com/article/6fe36c02159d4925a1223b426dbfc71d">idea2021.3</a>版本发布之后，很多人私信我，<a target="_blank" rel="noopener" href="https://www.jiweichengzhu.com/topic/85dab3064dff41198b5a02d164e2d6c3">idea</a>插件该如何激活？<br>每当此时，我都会有一种深深的无力感，感慨自己为何没有沉下心来深入研究学习，为此甚至有那么一丝丝的愧疚感，基于多重考量，最终我决定停止<a target="_blank" rel="noopener" href="https://www.jiweichengzhu.com/article/6df4ae9141e0417c86eeceb7adb84100">FineAgent</a>这个项目，以此事为鉴，在以后的工作和学习中，务必要静下心来，做事情再也不要流于表面。</p>
+</blockquote>
+<p>所以，既然如此多大佬开发的插件无法使用时，我们该如何破解呢？</p>
+<h4 id="好了，现在步入我们的主题"><a href="#好了，现在步入我们的主题" class="headerlink" title="好了，现在步入我们的主题"></a>好了，现在步入我们的主题</h4><h1 id="最新版的JetBrians系产品如何激活？"><a href="#最新版的JetBrians系产品如何激活？" class="headerlink" title="最新版的JetBrians系产品如何激活？"></a>最新版的JetBrians系产品如何激活？</h1><span id="more"></span>
+<h3 id="tips-如果安装过无限试用、修改过-hosts-请先卸载干净旧版本再安装，否需无法激活！"><a href="#tips-如果安装过无限试用、修改过-hosts-请先卸载干净旧版本再安装，否需无法激活！" class="headerlink" title="tips: 如果安装过无限试用、修改过 hosts 请先卸载干净旧版本再安装，否需无法激活！"></a>tips: 如果安装过无限试用、修改过 hosts 请先卸载干净旧版本再安装，否需无法激活！</h3><h4 id="本文以Pycharm为例，其他JetBrains软件都是可以的"><a href="#本文以Pycharm为例，其他JetBrains软件都是可以的" class="headerlink" title="本文以Pycharm为例，其他JetBrains软件都是可以的"></a>本文以Pycharm为例，其他JetBrains软件都是可以的</h4><p>在自动重置试用期脚本被Jetbrains官方反制之后，Z大又紧急推出了一款通用的开源插件ja-netfilter，见名知意，是一个网络过滤器，此款插件可以同时做到激活idea、激活插件、自定义激活时间长短、自定义LicenseName，怎么样，我称其为最灵活不为过吧？</p>
+<p>噼里啪啦说了这么多，有人可能还没明白ja-netfilter牛在哪里，这不就是跟FineAgent一样的效果吗？别着急，我们来看几张图。<br><img src="/posts/6aacb63a/16392986836065.jpg"></p>
+<p><img src="/posts/6aacb63a/16392988459390.jpg"></p>
+<p>这几张图是不是就印证了我上面提到了ja-netfilter的几项功能，现在我再说它最灵活，不为过吧？</p>
+<p>不得不感慨，Z大真是猛如虎，我只考虑到了一个点，他直接考虑一个面，确实nb，现在来教大家如何使用这个东西。</p>
+<h2 id="1-获取ja-netfilter文件（任选其一）"><a href="#1-获取ja-netfilter文件（任选其一）" class="headerlink" title="1. 获取ja-netfilter文件（任选其一）"></a>1. 获取ja-netfilter文件（任选其一）</h2><ol>
+<li>去<code>ja-netfilter</code>的<a target="_blank" rel="noopener" href="https://github.com/ja-netfilter/ja-netfilter/releases">github</a>上下载作者打好的release包；</li>
+<li>获取<a target="_blank" rel="noopener" href="https://github.com/ja-netfilter/ja-netfilter"><code>ja-netfilter</code></a>代码，在本地编译打包；</li>
+</ol>
+<p><img src="/posts/6aacb63a/16392990989818.jpg"></p>
+<p>如上图，<code>ja-netfilter.jar</code>是插件核心所在，而<code>janf_config.txt</code>则是用来配置上面说的LicenseName之类的信息。（提示：需要自己创建）</p>
+<h2 id="2-移除之前包括-FineAgent-在内的所有补丁（必须）"><a href="#2-移除之前包括-FineAgent-在内的所有补丁（必须）" class="headerlink" title="2. 移除之前包括 FineAgent 在内的所有补丁（必须）"></a>2. 移除之前包括 <code>FineAgent</code> 在内的所有补丁（必须）</h2><p><img src="/posts/6aacb63a/16392992089296.jpg"><br><img src="/posts/6aacb63a/16392992788537.jpg"></p>
+<p>这一步看起来很简单，但很多人都在这里吃了亏，删除补丁了之后，这里务必要删除或者注释掉，否则idea会启动不了了。</p>
+<h2 id="3-获取短期正版激活码"><a href="#3-获取短期正版激活码" class="headerlink" title="3. 获取短期正版激活码"></a>3. 获取短期正版激活码</h2><p>在<a target="_blank" rel="noopener" href="https://jetbra.in/test-7b06e3ddfa68ff9b483adfcd08cdd243831f7928.html?t=16018385822">jetbra.in</a>获取激活码，注意是正版哦，无需补丁，直接填进去就可以激活的那种。<br><img src="/posts/6aacb63a/16392995563537.jpg"></p>
+<p>如上图，可以看到这是一个短期的激活码，到2022.1.7号就过期了，但是它不需要任何补丁，填进去就能直接用，可能大家有疑惑了，这马上就到2022.1.7号了，岂不是马上就要过期了？别急，我们继续往下看。</p>
+<h2 id="4-引入ja-netfilter插件"><a href="#4-引入ja-netfilter插件" class="headerlink" title="4. 引入ja-netfilter插件"></a>4. 引入ja-netfilter插件</h2><p>这个-javaagent的配置就不用我多说了吧，跟以往的一些agent用法一模一样:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-javaagent:&lt;你的保存位置&gt;</span><br></pre></td></tr></table></figure>
+<p>比如我的:</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">-javaagent:/Users/xzh/Downloads/JetbrainsCrack/ja-netfilter/ja-netfilter.jar</span><br></pre></td></tr></table></figure>
+<p><img src="/posts/6aacb63a/16392998894356.jpg"></p>
+<h2 id="5-在janf-config-txt文件中配置信息"><a href="#5-在janf-config-txt文件中配置信息" class="headerlink" title="5. 在janf_config.txt文件中配置信息"></a>5. 在janf_config.txt文件中配置信息</h2><p>文章开头处已经说过了，ja-netfilter是一个网络过滤器，你可以把它看做是一个网络阻断器更为合适，结合这配置文件内容，大家应该好理解第三步的疑问了吧，你激活码过期又如何？我阻断网络校验，从中作梗让它一直校验不成功，变相的让Jetbrains认为我的激活码一直还是有效的，这思路绝了。</p>
+<p>配置文件中的dns和url都是直指Jetbrains的网站和请求，至于匹配符equal和prefix，字面意思也好理解，这些大家可以直接去<a target="_blank" rel="noopener" href="https://github.com/ja-netfilter/ja-netfilter">github</a>上看，Z大写的非常详细。</p>
+<p>这里给出一个 <code>janf_config.txt</code> 配置（当然你可以根据后文自行修改）：</p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">[DNS]</span><br><span class="line">EQUAL,jetbrains.com</span><br><span class="line">[URL]</span><br><span class="line">PREFIX,<span class="symbol">https:</span>/<span class="regexp">/account.jetbrains.com/lservice</span><span class="regexp">/rpc/validate</span>Key.action</span><br><span class="line">[MyMap]</span><br><span class="line">EQUAL,licenseeName-&gt;穷则独善其身，达则兼济天下。 ————《孟子·尽心上》</span><br><span class="line">EQUAL,gracePeriodDays-&gt;<span class="number">30</span></span><br><span class="line">EQUAL,paidUpTo-&gt;<span class="number">9999</span>-<span class="number">12</span>-<span class="number">31</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>注意:我们重点看一下 <code>MyMap</code> 这个配置项，这个非常重要（下载链接我放在下面了），如果缺少了它，并不会影响 <code>ja-netfilter</code> 的使用，只是你将无法灵活定义Pycharm的一些激活信息，这个plugin是在一开始是没有在 <code>ja-netfilter</code> 中的，后来由热心大佬给补上了，实在是给力。</li>
+<li>格式<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">licenseeName：被许可人姓名，也就是Licensed to xxx里的xxx信息；</span><br><span class="line">gracePeriodDays：宽限期；</span><br><span class="line">paidUpTo：激活的时长，也就是熟悉的2099-12-31的配置；</span><br></pre></td></tr></table></figure></li>
+<li>下载地址: <a target="_blank" rel="noopener" href="https://www.123pan.com/s/motA-zO6Rv">123云盘</a></li>
+</ul>
+<p>这个mymap本身并不能直接使用，而是作为ja-netfilter的一个plugin存在，如下图所示。<br><img src="/posts/6aacb63a/16393004609063.jpg"></p>
+<h2 id="6-重启Pycharm，加载-ja-netfilter-插件"><a href="#6-重启Pycharm，加载-ja-netfilter-插件" class="headerlink" title="6. 重启Pycharm，加载 ja-netfilter 插件"></a>6. 重启Pycharm，加载 <code>ja-netfilter</code> 插件</h2><p><img src="/posts/6aacb63a/16393005498617.jpg"></p>
+<p>搞定收工，zhile猛如虎！！！<br>有兴趣的同学可以看看zhile自己写的文章: <a target="_blank" rel="noopener" href="https://zhile.io/2021/11/29/ja-netfilter-javaagent-lib.html">传送门</a></p>
+
+    </div>
+
+    
+    
+    
+
+      <footer class="post-footer">
+          <div class="post-tags">
+              <a href="/tags/Python/" rel="tag"><i class="fa fa-tag"></i>Python</a>
+              <a href="/tags/C/" rel="tag"><i class="fa fa-tag"></i>C++</a>
+              <a href="/tags/JetBrains/" rel="tag"><i class="fa fa-tag"></i>JetBrains</a>
+              <a href="/tags/App/" rel="tag"><i class="fa fa-tag"></i>App</a>
+          </div>
+
+        
+
+
+        
+    <div class="post-nav">
+      <div class="post-nav-item">
+    <a href="/posts/4c31908/" rel="prev" title="Jetbrains系列产品重置试用方法">
+      <i class="fa fa-chevron-left"></i> Jetbrains系列产品重置试用方法
+    </a></div>
+      <div class="post-nav-item">
+    <a href="/posts/d87f7e0c/" rel="next" title="test">
+      test <i class="fa fa-chevron-right"></i>
+    </a></div>
+    </div>
+      </footer>
+    
+  </article>
+  
+  
+  
+
+
+
+          </div>
+          
+    <div class="comments" id="valine-comments"></div>
+
+<script>
+  window.addEventListener('tabs:register', () => {
+    let { activeClass } = CONFIG.comments;
+    if (CONFIG.comments.storage) {
+      activeClass = localStorage.getItem('comments_active') || activeClass;
+    }
+    if (activeClass) {
+      let activeTab = document.querySelector(`a[href="#comment-${activeClass}"]`);
+      if (activeTab) {
+        activeTab.click();
+      }
+    }
+  });
+  if (CONFIG.comments.storage) {
+    window.addEventListener('tabs:click', event => {
+      if (!event.target.matches('.tabs-comment .tab-content .tab-pane')) return;
+      let commentClass = event.target.classList[1];
+      localStorage.setItem('comments_active', commentClass);
+    });
+  }
+</script>
+
+        </div>
+          
+  
+  <div class="toggle sidebar-toggle">
+    <span class="toggle-line toggle-line-first"></span>
+    <span class="toggle-line toggle-line-middle"></span>
+    <span class="toggle-line toggle-line-last"></span>
+  </div>
+
+  <aside class="sidebar">
+    <div class="sidebar-inner">
+
+      <ul class="sidebar-nav motion-element">
+        <li class="sidebar-nav-toc">
+          文章目录
+        </li>
+        <li class="sidebar-nav-overview">
+          站点概览
+        </li>
+      </ul>
+
+      <!--noindex-->
+      <div class="post-toc-wrap sidebar-panel">
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%A5%BD%E4%BA%86%EF%BC%8C%E7%8E%B0%E5%9C%A8%E6%AD%A5%E5%85%A5%E6%88%91%E4%BB%AC%E7%9A%84%E4%B8%BB%E9%A2%98"><span class="nav-number">1.</span> <span class="nav-text">好了，现在步入我们的主题</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#%E6%9C%80%E6%96%B0%E7%89%88%E7%9A%84JetBrians%E7%B3%BB%E4%BA%A7%E5%93%81%E5%A6%82%E4%BD%95%E6%BF%80%E6%B4%BB%EF%BC%9F"><span class="nav-number"></span> <span class="nav-text">最新版的JetBrians系产品如何激活？</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#tips-%E5%A6%82%E6%9E%9C%E5%AE%89%E8%A3%85%E8%BF%87%E6%97%A0%E9%99%90%E8%AF%95%E7%94%A8%E3%80%81%E4%BF%AE%E6%94%B9%E8%BF%87-hosts-%E8%AF%B7%E5%85%88%E5%8D%B8%E8%BD%BD%E5%B9%B2%E5%87%80%E6%97%A7%E7%89%88%E6%9C%AC%E5%86%8D%E5%AE%89%E8%A3%85%EF%BC%8C%E5%90%A6%E9%9C%80%E6%97%A0%E6%B3%95%E6%BF%80%E6%B4%BB%EF%BC%81"><span class="nav-number"></span> <span class="nav-text">tips: 如果安装过无限试用、修改过 hosts 请先卸载干净旧版本再安装，否需无法激活！</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%9C%AC%E6%96%87%E4%BB%A5Pycharm%E4%B8%BA%E4%BE%8B%EF%BC%8C%E5%85%B6%E4%BB%96JetBrains%E8%BD%AF%E4%BB%B6%E9%83%BD%E6%98%AF%E5%8F%AF%E4%BB%A5%E7%9A%84"><span class="nav-number">1.</span> <span class="nav-text">本文以Pycharm为例，其他JetBrains软件都是可以的</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-%E8%8E%B7%E5%8F%96ja-netfilter%E6%96%87%E4%BB%B6%EF%BC%88%E4%BB%BB%E9%80%89%E5%85%B6%E4%B8%80%EF%BC%89"><span class="nav-number"></span> <span class="nav-text">1. 获取ja-netfilter文件（任选其一）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-%E7%A7%BB%E9%99%A4%E4%B9%8B%E5%89%8D%E5%8C%85%E6%8B%AC-FineAgent-%E5%9C%A8%E5%86%85%E7%9A%84%E6%89%80%E6%9C%89%E8%A1%A5%E4%B8%81%EF%BC%88%E5%BF%85%E9%A1%BB%EF%BC%89"><span class="nav-number"></span> <span class="nav-text">2. 移除之前包括 FineAgent 在内的所有补丁（必须）</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-%E8%8E%B7%E5%8F%96%E7%9F%AD%E6%9C%9F%E6%AD%A3%E7%89%88%E6%BF%80%E6%B4%BB%E7%A0%81"><span class="nav-number"></span> <span class="nav-text">3. 获取短期正版激活码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-%E5%BC%95%E5%85%A5ja-netfilter%E6%8F%92%E4%BB%B6"><span class="nav-number"></span> <span class="nav-text">4. 引入ja-netfilter插件</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#5-%E5%9C%A8janf-config-txt%E6%96%87%E4%BB%B6%E4%B8%AD%E9%85%8D%E7%BD%AE%E4%BF%A1%E6%81%AF"><span class="nav-number"></span> <span class="nav-text">5. 在janf_config.txt文件中配置信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#6-%E9%87%8D%E5%90%AFPycharm%EF%BC%8C%E5%8A%A0%E8%BD%BD-ja-netfilter-%E6%8F%92%E4%BB%B6"><span class="nav-number"></span> <span class="nav-text">6. 重启Pycharm，加载 ja-netfilter 插件</span></a></div>
+      </div>
+      <!--/noindex-->
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+    <img class="site-author-image" itemprop="image" alt="Little-Red-Stone"
+      src="/images/avatar.png">
+  <p class="site-author-name" itemprop="name">Little-Red-Stone</p>
+  <div class="site-description" itemprop="description">一名上海的学生党</div>
+</div>
+<div class="site-state-wrap motion-element">
+  <nav class="site-state">
+      <div class="site-state-item site-state-posts">
+          <a href="/archives/">
+        
+          <span class="site-state-item-count">7</span>
+          <span class="site-state-item-name">日志</span>
+        </a>
+      </div>
+      <div class="site-state-item site-state-categories">
+            <a href="/categories/">
+          
+        <span class="site-state-item-count">3</span>
+        <span class="site-state-item-name">分类</span></a>
+      </div>
+      <div class="site-state-item site-state-tags">
+            <a href="/tags/">
+          
+        <span class="site-state-item-count">12</span>
+        <span class="site-state-item-name">标签</span></a>
+      </div>
+  </nav>
+</div>
+  <div class="links-of-author motion-element">
+      <span class="links-of-author-item">
+        <a href="https://github.com/Little-Red-Stone/" title="GitHub → https:&#x2F;&#x2F;github.com&#x2F;Little-Red-Stone&#x2F;" rel="noopener" target="_blank"><i class="fab fa-github fa-fw"></i>GitHub</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="mailto:XuZiHao@LittleRedStone.onmicrosoft.com" title="E-Mail → mailto:XuZiHao@LittleRedStone.onmicrosoft.com" rel="noopener" target="_blank"><i class="fa fa-envelope fa-fw"></i>E-Mail</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://space.bilibili.com/515848011" title="B站 → https:&#x2F;&#x2F;space.bilibili.com&#x2F;515848011" rel="noopener" target="_blank"><i class="fab fa-bilibli fa-fw"></i>B站</a>
+      </span>
+      <span class="links-of-author-item">
+        <a href="https://segmentfault.com/u/little_red_stone" title="思否 → https:&#x2F;&#x2F;segmentfault.com&#x2F;u&#x2F;little_red_stone" rel="noopener" target="_blank"><i class="fab fa-segmentfault fa-fw"></i>思否</a>
+      </span>
+  </div>
+
+
+  <div class="links-of-blogroll motion-element">
+    <div class="links-of-blogroll-title"><i class="fa fa-link fa-fw"></i>
+      Links
+    </div>
+    <ul class="links-of-blogroll-list">
+        <li class="links-of-blogroll-item">
+          <a href="https://github.com/" title="https:&#x2F;&#x2F;github.com&#x2F;" rel="noopener" target="_blank">GitHub</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://www.bilibili.com/" title="https:&#x2F;&#x2F;www.bilibili.com" rel="noopener" target="_blank">BiliBili</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://segmentfault.com/" title="https:&#x2F;&#x2F;segmentfault.com" rel="noopener" target="_blank">SegmentFault</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://macwk.com/" title="https:&#x2F;&#x2F;macwk.com" rel="noopener" target="_blank">MacWk.com</a>
+        </li>
+        <li class="links-of-blogroll-item">
+          <a href="https://appstorrent.ru/" title="https:&#x2F;&#x2F;appstorrent.ru&#x2F;" rel="noopener" target="_blank">AppsTorrent</a>
+        </li>
+    </ul>
+  </div>
+
+      </div>
+
+    </div>
+  </aside>
+  <div id="sidebar-dimmer"></div>
+
+
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        
+
+        
+
+<div class="copyright">
+  
+  &copy; 
+  <span itemprop="copyrightYear">2021</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Little-Red-Stone</span>
+</div>
+  <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://pisces.theme-next.org/" class="theme-link" rel="noopener" target="_blank">NexT.Pisces</a> 强力驱动
+  </div>
+
+        
+
+
+
+
+
+
+
+
+      </div>
+    </footer>
+  </div>
+
+  
+  <script src="/lib/anime.min.js"></script>
+  <script src="/lib/velocity/velocity.min.js"></script>
+  <script src="/lib/velocity/velocity.ui.min.js"></script>
+<script src="/js/utils.js"></script>
+
+<script src="/js/motion.js"></script>
+
+
+<script src="/js/schemes/pisces.js"></script>
+
+
+<script src="/js/next-boot.js"></script>
+
+
+
+
+  
+
+
+
+
+  
+<script src="/js/local-search.js"></script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+  
+<script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
+
+<script>
+var options = {
+  bottom: '64px',
+  right: 'unset',
+  left: '32px',
+  time: '0.5s',
+  mixColor: 'transparent',
+  backgroundColor: 'transparent',
+  buttonColorDark: '#100f2c',
+  buttonColorLight: '#fff',
+  saveInCookies: true,
+  label: '🌓',
+  autoMatchOsTheme: true
+}
+const darkmode = new Darkmode(options);
+window.darkmode = darkmode;
+darkmode.showWidget();
+</script>
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'your appid',
+        appKey: 'your appkey',
+        placeholder: '&#x270d;写评论',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="/js/src/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    new Valine({
+        lang: 'zh-cn',
+        admin_email:'480133937@qq.com', //填写博主邮箱 
+        el: '#comments' ,
+        appId: 'your appid',
+        appKey: 'your appkey',
+        emoticon_url: 'https://cloud.panjunwen.com/alu',
+        emoticon_list: ["狂汗.png","不说话.png","汗.png","坐等.png","献花.png","不高兴.png","中刀.png","害羞.png","皱眉.png","小眼睛.png","暗地观察.png"],
+        placeholder: '&#x270d;写评论',
+  });
+  </script>
+
+
+</body>
+<script type="text/javascript" src="/js/src/particle.js"></script>
+
+</html>
