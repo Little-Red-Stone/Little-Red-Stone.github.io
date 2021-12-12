@@ -211,7 +211,7 @@
       </div>
 
       <div class="post-title">
-          <a class="post-title-link" href="/2021/12/12/Jetbrains%E7%B3%BB%E5%88%97%E4%BA%A7%E5%93%81%E6%9C%80%E6%96%B0%E6%BF%80%E6%B4%BB%E6%96%B9%E5%BC%8F/" itemprop="url">
+          <a class="post-title-link" href="/posts/6aacb63a/" itemprop="url">
             <span itemprop="name">Jetbrains系列产品最新激活方式</span>
           </a>
       </div>
@@ -231,7 +231,7 @@
       </div>
 
       <div class="post-title">
-          <a class="post-title-link" href="/2021/12/11/Jetbrains%E7%B3%BB%E5%88%97%E4%BA%A7%E5%93%81%E9%87%8D%E7%BD%AE%E8%AF%95%E7%94%A8%E6%96%B9%E6%B3%95/" itemprop="url">
+          <a class="post-title-link" href="/posts/4c31908/" itemprop="url">
             <span itemprop="name">Jetbrains系列产品重置试用方法</span>
           </a>
       </div>
@@ -251,7 +251,7 @@
       </div>
 
       <div class="post-title">
-          <a class="post-title-link" href="/2021/12/11/PD%E6%AD%A3%E7%A1%AE%E4%BD%BF%E7%94%A8%E6%96%B9%E6%B3%95/" itemprop="url">
+          <a class="post-title-link" href="/posts/4df5381d/" itemprop="url">
             <span itemprop="name">PD正确使用方法</span>
           </a>
       </div>
@@ -490,6 +490,47 @@ const darkmode = new Darkmode(options);
 window.darkmode = darkmode;
 darkmode.showWidget();
 </script>
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    var GUEST = ['nick','mail','link'];
+    var guest = 'nick,mail,link';
+    guest = guest.split(',').filter(item=>{
+      return GUEST.indexOf(item)>-1;
+    });
+    new Valine({
+        el: '#comments' ,
+        verify: false,
+        notify: false,
+        appId: 'your appid',
+        appKey: 'your appkey',
+        placeholder: '&#x270d;写评论',
+        avatar:'mm',
+        guest_info:guest,
+        pageSize:'10' || 10,
+    });
+  </script>
+
+
+
+  <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+  <script src="/js/src/Valine.min.js"></script>
+  
+  <script type="text/javascript">
+    new Valine({
+        lang: 'zh-cn',
+        admin_email:'480133937@qq.com', //填写博主邮箱 
+        el: '#comments' ,
+        appId: 'your appid',
+        appKey: 'your appkey',
+        emoticon_url: 'https://cloud.panjunwen.com/alu',
+        emoticon_list: ["狂汗.png","不说话.png","汗.png","坐等.png","献花.png","不高兴.png","中刀.png","害羞.png","皱眉.png","小眼睛.png","暗地观察.png"],
+        placeholder: '&#x270d;写评论',
+  });
+  </script>
+
 
 </body>
 <script type="text/javascript" src="/js/src/particle.js"></script>
