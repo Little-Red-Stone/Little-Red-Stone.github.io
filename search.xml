@@ -61,7 +61,7 @@
 <p>然后，从<a href="https://www.123pan.com/s/motA-zO6Rv">123云盘</a>下载 <code>mymap.jar</code> 放入 <code>ja-netfilter</code> 文件夹中的 <code>plugins</code> 文件夹，比如</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/Users/???/ja-netfilter/plugins/</span><br></pre></td></tr></table></figure>
 
-<p>然后将本源码下载、解压到 <code>ja-netfilter</code> 文件夹，在终端运行</p>
+<p>然后将<a href="https://github.com/Little-Red-Stone/JetBrains-Patch">本源码</a>下载、解压到 <code>ja-netfilter</code> 文件夹，在终端运行</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd ja-netfilter &amp;&amp; python3 main.py</span><br></pre></td></tr></table></figure>
 
 <h3 id="解释"><a href="#解释" class="headerlink" title="解释"></a>解释</h3><p>解释一下脚本的内容</p>
