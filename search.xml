@@ -48,9 +48,34 @@
       </categories>
       <tags>
         <tag>Python</tag>
-        <tag>C++</tag>
         <tag>JetBrains</tag>
+        <tag>C++</tag>
         <tag>App</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>JetBrains-Patch</title>
+    <url>/posts/fafc48ce/</url>
+    <content><![CDATA[<p>本脚本根据<a href="https://www.xuzihao.com/posts/6aacb63a/">Jetbrains系列产品最新激活方式</a>中的原理制作完成，<del>之前说过，我的shell是废的</del>，所以这个还是用Python写的</p>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>首先从<a href="https://github.com/ja-netfilter/ja-netfilter/releases">GitHub</a>下载ja-netfilter，放到用户文件夹，如: <code>/Users/???/</code> 中</p>
+<p>然后，从<a href="https://www.123pan.com/s/motA-zO6Rv">123云盘</a>下载 <code>mymap.jar</code> 放入 <code>ja-netfilter</code> 文件夹中的 <code>plugins</code> 文件夹，比如</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/Users/???/ja-netfilter/plugins/</span><br></pre></td></tr></table></figure>
+
+<p>然后将本源码下载、解压到 <code>ja-netfilter</code> 文件夹，在终端运行</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd ja-netfilter &amp;&amp; python3 main.py</span><br></pre></td></tr></table></figure>
+
+<h3 id="解释"><a href="#解释" class="headerlink" title="解释"></a>解释</h3><p>解释一下脚本的内容</p>
+<h4 id="当出现以下两行时"><a href="#当出现以下两行时" class="headerlink" title="当出现以下两行时"></a>当出现以下两行时</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">What name do you want to use?</span><br><span class="line">Name=</span><br></pre></td></tr></table></figure>
+<p>在 <code>name</code> 中输入你想在IDE中显示的许可证激活名称</p>
+<h4 id="当出现以下四行时"><a href="#当出现以下四行时" class="headerlink" title="当出现以下四行时"></a>当出现以下四行时</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">What time limit do you want?</span><br><span class="line">Year=</span><br><span class="line">Month=</span><br><span class="line">Day=</span><br></pre></td></tr></table></figure>
+<p>在 <code>Year</code> 、 <code>Month</code> 、 <code>Day</code> 中分别输入你想在IDE中显示的，许可证激活到期的年份、月份、日期</p>
+<h3 id="尽情享受吧！"><a href="#尽情享受吧！" class="headerlink" title="尽情享受吧！"></a>尽情享受吧！</h3>]]></content>
+      <categories>
+        <category>Projects</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>JetBrains</tag>
       </tags>
   </entry>
   <entry>
@@ -180,8 +205,8 @@
       </categories>
       <tags>
         <tag>Python</tag>
-        <tag>C++</tag>
         <tag>JetBrains</tag>
+        <tag>C++</tag>
         <tag>App</tag>
       </tags>
   </entry>
