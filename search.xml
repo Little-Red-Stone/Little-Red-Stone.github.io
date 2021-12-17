@@ -48,8 +48,8 @@
       </categories>
       <tags>
         <tag>Python</tag>
-        <tag>JetBrains</tag>
         <tag>C++</tag>
+        <tag>JetBrains</tag>
         <tag>App</tag>
       </tags>
   </entry>
@@ -57,6 +57,7 @@
     <title>JetBrains-Patch</title>
     <url>/posts/fafc48ce/</url>
     <content><![CDATA[<p>本脚本根据<a href="https://www.xuzihao.com/posts/6aacb63a/">Jetbrains系列产品最新激活方式</a>中的原理制作完成，<del>之前说过，我的shell是废的</del>，所以这个还是用Python写的</p>
+<span id="more"></span>
 <h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>首先从<a href="https://github.com/ja-netfilter/ja-netfilter/releases">GitHub</a>下载ja-netfilter，放到用户文件夹，如: <code>/Users/???/</code> 中</p>
 <p>然后，从<a href="https://www.123pan.com/s/motA-zO6Rv">123云盘</a>下载 <code>mymap.jar</code> 放入 <code>ja-netfilter</code> 文件夹中的 <code>plugins</code> 文件夹，比如</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/Users/???/ja-netfilter/plugins/</span><br></pre></td></tr></table></figure>
@@ -205,8 +206,8 @@
       </categories>
       <tags>
         <tag>Python</tag>
-        <tag>JetBrains</tag>
         <tag>C++</tag>
+        <tag>JetBrains</tag>
         <tag>App</tag>
       </tags>
   </entry>
