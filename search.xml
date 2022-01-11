@@ -23,7 +23,7 @@
 <p>如上图，<code>ja-netfilter.jar</code>是插件核心所在，而<code>janf_config.txt</code>则是用来配置上面说的LicenseName之类的信息。（提示：需要自己创建）</p>
 <h2 id="2-移除之前包括-FineAgent-在内的所有补丁（必须）"><a href="#2-移除之前包括-FineAgent-在内的所有补丁（必须）" class="headerlink" title="2. 移除之前包括 FineAgent 在内的所有补丁（必须）"></a>2. 移除之前包括 <code>FineAgent</code> 在内的所有补丁（必须）</h2><p><img src="/posts/6aacb63a/16392992089296.jpg"><br><img src="/posts/6aacb63a/16392992788537.jpg"></p>
 <p>这一步看起来很简单，但很多人都在这里吃了亏，删除补丁了之后，这里务必要删除或者注释掉，否则idea会启动不了了。</p>
-<h2 id="3-获取短期正版激活码"><a href="#3-获取短期正版激活码" class="headerlink" title="3. 获取短期正版激活码"></a>3. 获取短期正版激活码</h2><p>在<a href="https://jetbra.in/test-7b06e3ddfa68ff9b483adfcd08cdd243831f7928.html?t=16018385822">jetbra.in</a>获取激活码，注意是正版哦，无需补丁，直接填进去就可以激活的那种。<br><img src="/posts/6aacb63a/16392995563537.jpg"></p>
+<h2 id="3-获取短期正版激活码"><a href="#3-获取短期正版激活码" class="headerlink" title="3. 获取短期正版激活码"></a>3. 获取短期正版激活码</h2><p>在<a href="https://jetbra.in/s">jetbra.in</a>获取激活码，注意是正版哦，无需补丁，直接填进去就可以激活的那种。<br><img src="/posts/6aacb63a/16392995563537.jpg"></p>
 <p>如上图，可以看到这是一个短期的激活码，到2022.1.7号就过期了，但是它不需要任何补丁，填进去就能直接用，可能大家有疑惑了，这马上就到2022.1.7号了，岂不是马上就要过期了？别急，我们继续往下看。</p>
 <h2 id="4-引入ja-netfilter插件"><a href="#4-引入ja-netfilter插件" class="headerlink" title="4. 引入ja-netfilter插件"></a>4. 引入ja-netfilter插件</h2><p>这个-javaagent的配置就不用我多说了吧，跟以往的一些agent用法一模一样:</p>
 <figure class="highlight java"><table><tr><td class="code"><pre><span class="line">-javaagent:&lt;你的保存位置&gt;</span><br></pre></td></tr></table></figure>
