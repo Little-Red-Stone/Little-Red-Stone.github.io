@@ -13,7 +13,7 @@
 <h4 id="Thirdly"><a href="#Thirdly" class="headerlink" title="Thirdly:"></a>Thirdly:</h4><p>运行Pycharm，激活方式选择服务器，然后输入<code>https://jetbra.in</code>，点击激活即可<br><img src="/posts/1a41e785/Active%20with%20server.png" alt="Active with server"></p>
 <h4 id="Finally"><a href="#Finally" class="headerlink" title="Finally:"></a>Finally:</h4><p>至此激活就完成了，没有过期时间，没有版本限制<br><img src="/posts/1a41e785/Actived%20with%20server.png" alt="Actived with server"></p>
 <h2 id="2-基于拦截器-amp-mymap插件"><a href="#2-基于拦截器-amp-mymap插件" class="headerlink" title="2. 基于拦截器 &amp; mymap插件"></a>2. 基于拦截器 &amp; mymap插件</h2><h4 id="请注意！！-如果你已经做好第一种方法且想要自定义自己的许可证的话，也可以看下文"><a href="#请注意！！-如果你已经做好第一种方法且想要自定义自己的许可证的话，也可以看下文" class="headerlink" title="请注意！！ 如果你已经做好第一种方法且想要自定义自己的许可证的话，也可以看下文"></a>请注意！！ 如果你已经做好第一种方法且想要自定义自己的许可证的话，也可以看下文</h4><p>这个方案就是作者github直接提到的那个方案，大家只需要找一个<strong>可用的激活码</strong>完成初次激活，进入Pycharm之后再用拦截器屏蔽掉程序用来验证的URL地址即可</p>
-<p>这种方法需要我们下载一个叫<code>MyMap</code>的插件（本文写时是1.1.2最新）：<a href="https://github.com/zfkun/ja-netfilter-mymap-plugin/releases">Release地址</a><img src="/posts/1a41e785/Download%20MyMap.png" alt="Download MyMap"><br>下载完成<strong>重命名</strong>为<code>mymap.jar</code>后，放入<code>ja-netfilter</code>中的<code>plugins</code>文件夹<br>下面我们要修改一些文件:</p>
+<p>这种方法需要我们下载一个叫<code>MyMap</code>的插件（本文写时是1.1.2最新）：<a href="https://github.com/zfkun/ja-netfilter-mymap-plugin/releases">Release地址</a><br><img src="/posts/1a41e785/Download%20MyMap.png" alt="Download MyMap"><br>下载完成<strong>重命名</strong>为<code>mymap.jar</code>后，放入<code>ja-netfilter</code>中的<code>plugins</code>文件夹<br>下面我们要修改一些文件:</p>
 <h3 id="mymap-conf"><a href="#mymap-conf" class="headerlink" title="mymap.conf"></a>mymap.conf</h3><p>在<code>config</code>文件夹中新建<code>mymap.conf</code>，填入：</p>
 <figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[MyMap]</span><br><span class="line">EQUAL,licenseeName-&gt;你想在激活界面显示的名字</span><br><span class="line">EQUAL,gracePeriodDays-&gt;宽限天数，30最佳</span><br><span class="line">EQUAL,paidUpTo-&gt;过期时间，不建议太大，容易报错（yyyy-mm-dd 格式）</span><br></pre></td></tr></table></figure>
 <p>举个例子：</p>
@@ -25,6 +25,7 @@
 
 <p>这种方式相对第一个需要<strong>改动的配置更多</strong>，而且需要自己找一个<strong>仅过期但未被封禁</strong>的激活码（<em>有点烦对不对？</em>）<br>但如果你第一种方法已经做好，你可以不用服务器激活，<strong>无论过期或被封禁的激活码都能用</strong></p>
 <p><a href="https://jetbra.in/s">https://jetbra.in/s</a>中激活码都是<strong>只有一个月时间但未被封禁</strong>，用它来激活后就能被mymap屏蔽了（不过最近激活码好像有点问题）</p>
+<h4 id="用-power-amp-mymap-激活的例图："><a href="#用-power-amp-mymap-激活的例图：" class="headerlink" title="用 power &amp; mymap 激活的例图："></a>用 power &amp; mymap 激活的例图：</h4><p><img src="/posts/1a41e785/Actived%20with%20power%20-%20mymap.png" alt="Actived with power - mymap"><br>ps. 上图用的激活码就是已经被封禁的</p>
 <h2 id="总结一下"><a href="#总结一下" class="headerlink" title="总结一下"></a>总结一下</h2><p>第一种方法十分便捷，简单粗暴<br>第二种方法有点操作难度，爱捣鼓的人可以试试</p>
 ]]></content>
       <categories>
