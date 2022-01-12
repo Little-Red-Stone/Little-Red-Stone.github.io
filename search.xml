@@ -1,44 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>Jetbrains系列产品最新激活方式（2021.3.1及以上）</title>
-    <url>/posts/1a41e785/</url>
-    <content><![CDATA[<p>emmm… 事情是这样的：<br>我的<code>Pycharm</code>升级到 <code>2021.3.1</code> 的时候我突然发现<a href="https://www.xuzihao.com/posts/6aacb63a/">以前的激活方式</a>突然<strong>不能用了</strong>，不过经过了我的一番在GitHub上的浏览，找到了解决方案（适配<strong>所有Jetbrains产品</strong>，本文以Pycharm为例），共有两种：</p>
-<span id="more"></span>
-<p>但是首先，你得下载最新的<code>ja-netfilter</code>文件，注意<strong>不是源码</strong>，如图（本文写时是2.0.1最新）：<a href="https://github.com/ja-netfilter/ja-netfilter/releases">Release 地址</a><br><img src="/posts/1a41e785/Download.png" alt="Download"><br>然后解压<code>Zip文件</code>在某个位置，记住它的路径</p>
-<h2 id="1-基于power插件"><a href="#1-基于power插件" class="headerlink" title="1. 基于power插件"></a>1. 基于power插件</h2><p>这个方法十分的简单粗暴并且快捷，激活之后就不需要找再辛苦去找注册码了，所以后续升级也都是没问题的</p>
-<h3 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h3><h4 id="Firstly"><a href="#Firstly" class="headerlink" title="Firstly:"></a>Firstly:</h4><p>进入我们刚刚解压<code>ja-netfilter</code>文件的位置，打开<code>config</code>文件夹中的<code>power.conf</code>文件，将其内容替换为：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[Result]</span><br><span class="line">EQUAL,120506319308405029943033101198259523557651500267734599270782782071425072541184605728867830395125412768750966448411447392137801711908001958831204692561738046570955709184538088569271703484602917023462976408329100293802371486063140115775311907530943821345005598057265747678100463689973450156515895355214983079672467769169324175533323801179755544364921063654340185317077965735659865485150734884110709760680757502730007505995422237875348017761382234951127263548660889969621730944377739766734765769747684457663965611896398862841334032542726392699785677440644859509166466497325071885386505404431787167239320957696896447925472784312642576835792921100239616617639216190447230487878404191838684279341834945197861631446454083984351911070798505031973496634229907567362853550735007045265430703581336189733180744888091740381912913980707537008943084904260746266383019688346709856215660232636334604552145129775009725685598798774376749830567219982166661918408832945395290223853748014160473876195098438959881711585152480525870219408398012002829112863175041709512032251930709608035158747101960447898838942705485214217426612863919268749874079707310181890737049603255938886865558759802593500502795018952114650332765839003032013708006750600413455628536259,65537,860106576952879101192782278876319243486072481962999610484027161162448933268423045647258145695082284265933019120714643752088997312766689988016808929265129401027490891810902278465065056686129972085119605237470899952751915070244375173428976413406363879128531449407795115913715863867259163957682164040613505040314747660800424242248055421184038777878268502955477482203711835548014501087778959157112423823275878824729132393281517778742463067583320091009916141454657614089600126948087954465055321987012989937065785013284988096504657892738536613208311013047138019418152103262155848541574327484510025594166239784429845180875774012229784878903603491426732347994359380330103328705981064044872334790365894924494923595382470094461546336020961505275530597716457288511366082299255537762891238136381924520749228412559219346777184174219999640906007205260040707839706131662149325151230558316068068139406816080119906833578907759960298749494098180107991752250725928647349597506532778539709852254478061194098069801549845163358315116260915270480057699929968468068015735162890213859113563672040630687357054902747438421559817252127187138838514773245413540030800888215961904267348727206110582505606182944023582459006406137831940959195566364811905585377246353-&gt;31872219281407242025505148642475109331663948030010491344733687844358944945421064967310388547820970408352359213697487269225694990179009814674781374751323403257628081559561462351695605167675284372388551941279783515209238245831229026662363729380633136520288327292047232179909791526492877475417113579821717193807584807644097527647305469671333646868883650312280989663788656507661713409911267085806708237966730821529702498972114194166091819277582149433578383639532136271637219758962252614390071122773223025154710411681628917523557526099053858210363406122853294409830276270946292893988830514538950951686480580886602618927728470029090747400687617046511462665469446846624685614084264191213318074804549715573780408305977947238915527798680393538207482620648181504876534152430149355791756374642327623133843473947861771150672096834149014464956451480803326284417202116346454345929350148770746553056995922154382822307758515805142704373984019252210715650875853634697920708113806880196144197384637328982263167395073688501517286678083973976140696077590122053014085412828620051470085033364773099146103525313018873319293728800442101520384088109603555959893639842091339193857485407672132882577840295039058621747654642202620767068924079813640067442975</span><br><span class="line">EQUAL,8028659553836119901593655311677865290672387540027895708985570867455842278776015838142490556122515317003830575671206217290165955723210315889275621408086645995280770696135307020454887097794294273869941097888549275028604248332746117479367032100139091095818169444690976206636597409322539276252570779516636180497560345090851316373570301807158645002654208816162902430571101092599540795501152368695431168224953320283502815852695423193526255836776240019085157444254721864134058745605280085897450952937893645487302683006269553010996013513395044612932182772364336368242146044741660443063207438830622376694839772096688572619877,65537,21052260334349247097390263197515551021430500095747078612475171670547647379514624742422155617118382403386162585789957995106937640909858927441120214136124618650916253946431099279059999234690271861285094667690686174087562943995337813383652323725628494261414287817117703355799303086256914782640807165021059760198249458510362432176960683009890989990086614909076853502936665842869163947730574085863127445475967466399017447434906719734480523659879746056728772390182338236187070557277461449143752467418310063647027554915213099799725713708651142505590086828211040619445941301844994775362846837122335522584661592447560060751169-&gt;986236757547332986472011617696226561292849812918563355472727826767720188564083584387121625107510786855734801053524719833194566624465665316622563244215340671405971599343902468620306327831715457360719532421388780770165778156818229863337344187575566725786793391480600129482653072861971002459947277805295727097226389568776499707662505334062639449916265137796823793276300221537201727072401742985542559596685092673521228140822200236743113743661549252453726123450722876929538747702356573783116197523966334991563351853851212597377279504828784687920949198341066450537230593608440475006386024448307924665012521692416658191</span><br></pre></td></tr></table></figure>
-<h4 id="Secondly"><a href="#Secondly" class="headerlink" title="Secondly:"></a>Secondly:</h4><p>编辑Pycharm的VM选项（自定义或全局都行，我建议用全局的），后缀名为<code>.vmoptions</code><br>全局选项在Pycharm的安装位置（Mac系统路径为：<code>/Applications/PyCharm.app/Contents/bin/pycharm.vmoptions</code>）<br>自定义选项在：<code>~/Library/Application Support/JetBrains/Pycharm2021.3/idea.vmoptions</code>(<code>2021.3</code>替换为自己Pycharm的版本)<br>然后在vmoptions文件尾增加一行 <code>-javaagent:/你解压后的ja-netfilter.jar文件路径</code>（<strong>注意</strong>：中间不能有空格），比如我的：<br><img src="/posts/1a41e785/Location.png" alt="Location"></p>
-<h4 id="Thirdly"><a href="#Thirdly" class="headerlink" title="Thirdly:"></a>Thirdly:</h4><p>运行Pycharm，激活方式选择服务器，然后输入<code>https://jetbra.in</code>，点击激活即可<br><img src="/posts/1a41e785/Active%20with%20server.png" alt="Active with server"></p>
-<h4 id="Finally"><a href="#Finally" class="headerlink" title="Finally:"></a>Finally:</h4><p>至此激活就完成了，没有过期时间，没有版本限制<br><img src="/posts/1a41e785/Actived%20with%20server.png" alt="Actived with server"></p>
-<h2 id="2-基于拦截器-amp-mymap插件"><a href="#2-基于拦截器-amp-mymap插件" class="headerlink" title="2. 基于拦截器 &amp; mymap插件"></a>2. 基于拦截器 &amp; mymap插件</h2><h4 id="请注意！！-如果你已经做好第一种方法且想要自定义自己的许可证的话，也可以看下文"><a href="#请注意！！-如果你已经做好第一种方法且想要自定义自己的许可证的话，也可以看下文" class="headerlink" title="请注意！！ 如果你已经做好第一种方法且想要自定义自己的许可证的话，也可以看下文"></a>请注意！！ 如果你已经做好第一种方法且想要自定义自己的许可证的话，也可以看下文</h4><p>这个方案就是作者github直接提到的那个方案，大家只需要找一个<strong>可用的激活码</strong>完成初次激活，进入Pycharm之后再用拦截器屏蔽掉程序用来验证的URL地址即可</p>
-<p>这种方法需要我们下载一个叫<code>MyMap</code>的插件（本文写时是1.1.2最新）：<a href="https://github.com/zfkun/ja-netfilter-mymap-plugin/releases">Release地址</a><br><img src="/posts/1a41e785/Download%20MyMap.png" alt="Download MyMap"><br>下载完成<strong>重命名</strong>为<code>mymap.jar</code>后，放入<code>ja-netfilter</code>中的<code>plugins</code>文件夹<br>下面我们要修改一些文件:</p>
-<h3 id="mymap-conf"><a href="#mymap-conf" class="headerlink" title="mymap.conf"></a>mymap.conf</h3><p>在<code>config</code>文件夹中新建<code>mymap.conf</code>，填入：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[MyMap]</span><br><span class="line">EQUAL,licenseeName-&gt;你想在激活界面显示的名字</span><br><span class="line">EQUAL,gracePeriodDays-&gt;宽限天数，30最佳</span><br><span class="line">EQUAL,paidUpTo-&gt;过期时间，不建议太大，容易报错（yyyy-mm-dd 格式）</span><br></pre></td></tr></table></figure>
-<p>举个例子：</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[MyMap]</span><br><span class="line">EQUAL,licenseeName-&gt;穷则独善其身，达则兼济天下。 ————《孟子·尽心上》</span><br><span class="line">EQUAL,gracePeriodDays-&gt;30</span><br><span class="line">EQUAL,paidUpTo-&gt;9999-12-31</span><br></pre></td></tr></table></figure>
-<h3 id="dns-conf"><a href="#dns-conf" class="headerlink" title="dns.conf"></a>dns.conf</h3><p>接着打开<code>dns.conf</code><br>将里面的内容替换为:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[DNS]</span><br><span class="line">EQUAL,jetbrains.com</span><br></pre></td></tr></table></figure>
-<h3 id="url-conf"><a href="#url-conf" class="headerlink" title="url.conf"></a>url.conf</h3><p>再打开<code>url.conf</code><br>将里面的内容替换为:</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[URL]</span><br><span class="line">PREFIX,https://account.jetbrains.com/lservice/rpc/validateKey.action</span><br></pre></td></tr></table></figure>
-
-<p>这种方式相对第一个需要<strong>改动的配置更多</strong>，而且需要自己找一个<strong>仅过期但未被封禁</strong>的激活码（<em>有点烦对不对？</em>）<br>但如果你第一种方法已经做好，你可以不用服务器激活，<strong>无论过期或被封禁的激活码都能用</strong></p>
-<p><a href="https://jetbra.in/s">https://jetbra.in/s</a>中激活码都是<strong>只有一个月时间但未被封禁</strong>，用它来激活后就能被mymap屏蔽了（不过最近激活码好像有点问题）</p>
-<h4 id="用-power-amp-mymap-激活的例图："><a href="#用-power-amp-mymap-激活的例图：" class="headerlink" title="用 power &amp; mymap 激活的例图："></a>用 power &amp; mymap 激活的例图：</h4><p><img src="/posts/1a41e785/Actived%20with%20power%20-%20mymap.png" alt="Actived with power - mymap"><br>ps. 上图用的激活码就是已经被封禁的</p>
-<h2 id="总结一下"><a href="#总结一下" class="headerlink" title="总结一下"></a>总结一下</h2><p>第一种方法十分便捷，简单粗暴<br>第二种方法有点操作难度，爱捣鼓的人可以试试</p>
-]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>JetBrains</tag>
-        <tag>C++</tag>
-        <tag>App</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>JetBrains-Patch</title>
     <url>/posts/fafc48ce/</url>
     <content><![CDATA[<p>本脚本根据<a href="https://www.xuzihao.com/posts/6aacb63a/">Jetbrains系列产品最新激活方式</a>中的原理制作完成，<del>之前说过，我的shell是废的</del>，所以这个还是用Python写的</p>
@@ -62,18 +24,6 @@
       <tags>
         <tag>Python</tag>
         <tag>JetBrains</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>test</title>
-    <url>/posts/d87f7e0c/</url>
-    <content><![CDATA[<h1 id="This-is-a-pictrue-test-file"><a href="#This-is-a-pictrue-test-file" class="headerlink" title="This is a pictrue test file"></a>This is a pictrue test file</h1><p><img src="/posts/d87f7e0c/1.png"></p>
-]]></content>
-      <categories>
-        <category>lead in</category>
-      </categories>
-      <tags>
-        <tag>test</tag>
       </tags>
   </entry>
   <entry>
@@ -118,6 +68,44 @@
 <p>这个mymap本身并不能直接使用，而是作为ja-netfilter的一个plugin存在，如下图所示。<br><img src="/posts/6aacb63a/16393004609063.jpg"></p>
 <h2 id="6-重启Pycharm，加载-ja-netfilter-插件"><a href="#6-重启Pycharm，加载-ja-netfilter-插件" class="headerlink" title="6. 重启Pycharm，加载 ja-netfilter 插件"></a>6. 重启Pycharm，加载 <code>ja-netfilter</code> 插件</h2><p><img src="/posts/6aacb63a/16393005498617.jpg"></p>
 <p>搞定收工，zhile猛如虎！！！<br>有兴趣的同学可以看看zhile自己写的文章: <a href="https://zhile.io/2021/11/29/ja-netfilter-javaagent-lib.html">传送门</a></p>
+]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>JetBrains</tag>
+        <tag>C++</tag>
+        <tag>App</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Jetbrains系列产品最新激活方式（2021.3.1及以上）</title>
+    <url>/posts/1a41e785/</url>
+    <content><![CDATA[<p>emmm… 事情是这样的：<br>我的<code>Pycharm</code>升级到 <code>2021.3.1</code> 的时候我突然发现<a href="https://www.xuzihao.com/posts/6aacb63a/">以前的激活方式</a>突然<strong>不能用了</strong>，不过经过了我的一番在GitHub上的浏览，找到了解决方案（适配<strong>所有Jetbrains产品</strong>，本文以Pycharm为例），共有两种：</p>
+<span id="more"></span>
+<p>但是首先，你得下载最新的<code>ja-netfilter</code>文件，注意<strong>不是源码</strong>，如图（本文写时是2.0.1最新）：<a href="https://github.com/ja-netfilter/ja-netfilter/releases">Release 地址</a><br><img src="/posts/1a41e785/Download.png" alt="Download"><br>然后解压<code>Zip文件</code>在某个位置，记住它的路径</p>
+<h2 id="1-基于power插件"><a href="#1-基于power插件" class="headerlink" title="1. 基于power插件"></a>1. 基于power插件</h2><p>这个方法十分的简单粗暴并且快捷，激活之后就不需要找再辛苦去找注册码了，所以后续升级也都是没问题的</p>
+<h3 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h3><h4 id="Firstly"><a href="#Firstly" class="headerlink" title="Firstly:"></a>Firstly:</h4><p>进入我们刚刚解压<code>ja-netfilter</code>文件的位置，打开<code>config</code>文件夹中的<code>power.conf</code>文件，将其内容替换为：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[Result]</span><br><span class="line">EQUAL,120506319308405029943033101198259523557651500267734599270782782071425072541184605728867830395125412768750966448411447392137801711908001958831204692561738046570955709184538088569271703484602917023462976408329100293802371486063140115775311907530943821345005598057265747678100463689973450156515895355214983079672467769169324175533323801179755544364921063654340185317077965735659865485150734884110709760680757502730007505995422237875348017761382234951127263548660889969621730944377739766734765769747684457663965611896398862841334032542726392699785677440644859509166466497325071885386505404431787167239320957696896447925472784312642576835792921100239616617639216190447230487878404191838684279341834945197861631446454083984351911070798505031973496634229907567362853550735007045265430703581336189733180744888091740381912913980707537008943084904260746266383019688346709856215660232636334604552145129775009725685598798774376749830567219982166661918408832945395290223853748014160473876195098438959881711585152480525870219408398012002829112863175041709512032251930709608035158747101960447898838942705485214217426612863919268749874079707310181890737049603255938886865558759802593500502795018952114650332765839003032013708006750600413455628536259,65537,860106576952879101192782278876319243486072481962999610484027161162448933268423045647258145695082284265933019120714643752088997312766689988016808929265129401027490891810902278465065056686129972085119605237470899952751915070244375173428976413406363879128531449407795115913715863867259163957682164040613505040314747660800424242248055421184038777878268502955477482203711835548014501087778959157112423823275878824729132393281517778742463067583320091009916141454657614089600126948087954465055321987012989937065785013284988096504657892738536613208311013047138019418152103262155848541574327484510025594166239784429845180875774012229784878903603491426732347994359380330103328705981064044872334790365894924494923595382470094461546336020961505275530597716457288511366082299255537762891238136381924520749228412559219346777184174219999640906007205260040707839706131662149325151230558316068068139406816080119906833578907759960298749494098180107991752250725928647349597506532778539709852254478061194098069801549845163358315116260915270480057699929968468068015735162890213859113563672040630687357054902747438421559817252127187138838514773245413540030800888215961904267348727206110582505606182944023582459006406137831940959195566364811905585377246353-&gt;31872219281407242025505148642475109331663948030010491344733687844358944945421064967310388547820970408352359213697487269225694990179009814674781374751323403257628081559561462351695605167675284372388551941279783515209238245831229026662363729380633136520288327292047232179909791526492877475417113579821717193807584807644097527647305469671333646868883650312280989663788656507661713409911267085806708237966730821529702498972114194166091819277582149433578383639532136271637219758962252614390071122773223025154710411681628917523557526099053858210363406122853294409830276270946292893988830514538950951686480580886602618927728470029090747400687617046511462665469446846624685614084264191213318074804549715573780408305977947238915527798680393538207482620648181504876534152430149355791756374642327623133843473947861771150672096834149014464956451480803326284417202116346454345929350148770746553056995922154382822307758515805142704373984019252210715650875853634697920708113806880196144197384637328982263167395073688501517286678083973976140696077590122053014085412828620051470085033364773099146103525313018873319293728800442101520384088109603555959893639842091339193857485407672132882577840295039058621747654642202620767068924079813640067442975</span><br><span class="line">EQUAL,8028659553836119901593655311677865290672387540027895708985570867455842278776015838142490556122515317003830575671206217290165955723210315889275621408086645995280770696135307020454887097794294273869941097888549275028604248332746117479367032100139091095818169444690976206636597409322539276252570779516636180497560345090851316373570301807158645002654208816162902430571101092599540795501152368695431168224953320283502815852695423193526255836776240019085157444254721864134058745605280085897450952937893645487302683006269553010996013513395044612932182772364336368242146044741660443063207438830622376694839772096688572619877,65537,21052260334349247097390263197515551021430500095747078612475171670547647379514624742422155617118382403386162585789957995106937640909858927441120214136124618650916253946431099279059999234690271861285094667690686174087562943995337813383652323725628494261414287817117703355799303086256914782640807165021059760198249458510362432176960683009890989990086614909076853502936665842869163947730574085863127445475967466399017447434906719734480523659879746056728772390182338236187070557277461449143752467418310063647027554915213099799725713708651142505590086828211040619445941301844994775362846837122335522584661592447560060751169-&gt;986236757547332986472011617696226561292849812918563355472727826767720188564083584387121625107510786855734801053524719833194566624465665316622563244215340671405971599343902468620306327831715457360719532421388780770165778156818229863337344187575566725786793391480600129482653072861971002459947277805295727097226389568776499707662505334062639449916265137796823793276300221537201727072401742985542559596685092673521228140822200236743113743661549252453726123450722876929538747702356573783116197523966334991563351853851212597377279504828784687920949198341066450537230593608440475006386024448307924665012521692416658191</span><br></pre></td></tr></table></figure>
+<h4 id="Secondly"><a href="#Secondly" class="headerlink" title="Secondly:"></a>Secondly:</h4><p>编辑Pycharm的VM选项（自定义或全局都行，我建议用全局的），后缀名为<code>.vmoptions</code><br>全局选项在Pycharm的安装位置（Mac系统路径为：<code>/Applications/PyCharm.app/Contents/bin/pycharm.vmoptions</code>）<br>自定义选项在：<code>~/Library/Application Support/JetBrains/Pycharm2021.3/idea.vmoptions</code>(<code>2021.3</code>替换为自己Pycharm的版本)<br>然后在vmoptions文件尾增加一行 <code>-javaagent:/你解压后的ja-netfilter.jar文件路径</code>（<strong>注意</strong>：中间不能有空格），比如我的：<br><img src="/posts/1a41e785/Location.png" alt="Location"></p>
+<h4 id="Thirdly"><a href="#Thirdly" class="headerlink" title="Thirdly:"></a>Thirdly:</h4><p>运行Pycharm，激活方式选择服务器，然后输入<code>https://jetbra.in</code>，点击激活即可<br><img src="/posts/1a41e785/Active%20with%20server.png" alt="Active with server"></p>
+<h4 id="Finally"><a href="#Finally" class="headerlink" title="Finally:"></a>Finally:</h4><p>至此激活就完成了，没有过期时间，没有版本限制<br><img src="/posts/1a41e785/Actived%20with%20server.png" alt="Actived with server"></p>
+<h2 id="2-基于拦截器-amp-mymap插件"><a href="#2-基于拦截器-amp-mymap插件" class="headerlink" title="2. 基于拦截器 &amp; mymap插件"></a>2. 基于拦截器 &amp; mymap插件</h2><h4 id="请注意！！-如果你已经做好第一种方法且想要自定义自己的许可证的话，也可以看下文"><a href="#请注意！！-如果你已经做好第一种方法且想要自定义自己的许可证的话，也可以看下文" class="headerlink" title="请注意！！ 如果你已经做好第一种方法且想要自定义自己的许可证的话，也可以看下文"></a>请注意！！ 如果你已经做好第一种方法且想要自定义自己的许可证的话，也可以看下文</h4><p>这个方案就是作者github直接提到的那个方案，大家只需要找一个<strong>可用的激活码</strong>完成初次激活，进入Pycharm之后再用拦截器屏蔽掉程序用来验证的URL地址即可</p>
+<p>这种方法需要我们下载一个叫<code>MyMap</code>的插件（本文写时是1.1.2最新）：<a href="https://github.com/zfkun/ja-netfilter-mymap-plugin/releases">Release地址</a><br><img src="/posts/1a41e785/Download%20MyMap.png" alt="Download MyMap"><br>下载完成<strong>重命名</strong>为<code>mymap.jar</code>后，放入<code>ja-netfilter</code>中的<code>plugins</code>文件夹<br>下面我们要修改一些文件:</p>
+<h3 id="mymap-conf"><a href="#mymap-conf" class="headerlink" title="mymap.conf"></a>mymap.conf</h3><p>在<code>config</code>文件夹中新建<code>mymap.conf</code>，填入：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[MyMap]</span><br><span class="line">EQUAL,licenseeName-&gt;你想在激活界面显示的名字</span><br><span class="line">EQUAL,gracePeriodDays-&gt;宽限天数，30最佳</span><br><span class="line">EQUAL,paidUpTo-&gt;过期时间，不建议太大，容易报错（yyyy-mm-dd 格式）</span><br></pre></td></tr></table></figure>
+<p>举个例子：</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[MyMap]</span><br><span class="line">EQUAL,licenseeName-&gt;穷则独善其身，达则兼济天下。 ————《孟子·尽心上》</span><br><span class="line">EQUAL,gracePeriodDays-&gt;30</span><br><span class="line">EQUAL,paidUpTo-&gt;9999-12-31</span><br></pre></td></tr></table></figure>
+<h3 id="dns-conf"><a href="#dns-conf" class="headerlink" title="dns.conf"></a>dns.conf</h3><p>接着打开<code>dns.conf</code><br>将里面的内容替换为:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[DNS]</span><br><span class="line">EQUAL,jetbrains.com</span><br></pre></td></tr></table></figure>
+<h3 id="url-conf"><a href="#url-conf" class="headerlink" title="url.conf"></a>url.conf</h3><p>再打开<code>url.conf</code><br>将里面的内容替换为:</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">[URL]</span><br><span class="line">PREFIX,https://account.jetbrains.com/lservice/rpc/validateKey.action</span><br></pre></td></tr></table></figure>
+
+<p>这种方式相对第一个需要<strong>改动的配置更多</strong>，而且需要自己找一个<strong>仅过期但未被封禁</strong>的激活码（<em>有点烦对不对？</em>）<br>但如果你第一种方法已经做好，你可以不用服务器激活，<strong>无论过期或被封禁的激活码都能用</strong></p>
+<p><a href="https://jetbra.in/s">https://jetbra.in/s</a>中激活码都是<strong>只有一个月时间但未被封禁</strong>，用它来激活后就能被mymap屏蔽了（不过最近激活码好像有点问题）</p>
+<h4 id="用-power-amp-mymap-激活的例图："><a href="#用-power-amp-mymap-激活的例图：" class="headerlink" title="用 power &amp; mymap 激活的例图："></a>用 power &amp; mymap 激活的例图：</h4><p><img src="/posts/1a41e785/Actived%20with%20power%20-%20mymap.png" alt="Actived with power - mymap"><br>ps. 上图用的激活码就是已经被封禁的</p>
+<h2 id="总结一下"><a href="#总结一下" class="headerlink" title="总结一下"></a>总结一下</h2><p>第一种方法十分便捷，简单粗暴<br>第二种方法有点操作难度，爱捣鼓的人可以试试</p>
 ]]></content>
       <categories>
         <category>教程</category>
@@ -250,32 +238,6 @@
       </tags>
   </entry>
   <entry>
-    <title>PD正确使用方法</title>
-    <url>/posts/4df5381d/</url>
-    <content><![CDATA[<h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><h4 id="之前我是用了-自动操作-制作app来实现-PD-使用时间到期后的无限使用"><a href="#之前我是用了-自动操作-制作app来实现-PD-使用时间到期后的无限使用" class="headerlink" title="之前我是用了 自动操作 制作app来实现 PD 使用时间到期后的无限使用"></a>之前我是用了 <code>自动操作</code> 制作app来实现 <code>PD</code> <strong>使用时间到期后</strong>的无限使用</h4><p>如有兴趣的话可以看看这篇文章 <a href="https://segmentfault.com/a/1190000040690683">如何正确使用Parallels Desktop（全网最细）</a></p>
-<span id="more"></span>
-
-<h4 id="但现在，不得不为国内的开发者竖起大拇指！！"><a href="#但现在，不得不为国内的开发者竖起大拇指！！" class="headerlink" title="但现在，不得不为国内的开发者竖起大拇指！！"></a>但现在，不得不为国内的开发者<strong>竖起大拇指！！</strong></h4><p><em>(因为TNT团队更新的不及时）</em> 有人已经开发出了 <code>PD</code> 的启动工具，名为 <code>PD-Runner</code> </p>
-<h2 id="功能简介"><a href="#功能简介" class="headerlink" title="功能简介"></a>功能简介</h2><p>适用于 <code>Parallels Desktop</code> 的启动器, 可以<strong>无视试用期限</strong>强制启动客户机 <em>(支持 PD17.1.0)</em><br>A tool for <code>Parallels Desktop</code> can start VMs <strong>even expired</strong> <em>(Support for PD17.1.0 or earlier)</em></p>
-<h3 id="使用-Usage"><a href="#使用-Usage" class="headerlink" title="使用 Usage"></a>使用 Usage</h3><p><code>PD Runner</code> 是一个菜单栏APP, 启动后会在菜单栏显示程序图标. 点击菜单栏图标可列出当前Mac上安装的所有客户机, 然后点击客户机名称即可启动对应的客户机.<br><code>PD Runner</code> will show an icon in the menu bar. Click menubar icon to list all the VMs on your Mac, and click the name to start your VM.</p>
-<h3 id="截图-Screenshot"><a href="#截图-Screenshot" class="headerlink" title="截图 Screenshot"></a>截图 Screenshot</h3><p><img src="https://github.com/lihaoyun6/PD-Runner/raw/main/img/Screenshot.png" alt="Screenshot.png"></p>
-<h4 id="感谢-lihaoyun6-的开发！源代码已开源"><a href="#感谢-lihaoyun6-的开发！源代码已开源" class="headerlink" title="感谢 lihaoyun6 的开发！源代码已开源"></a>感谢 <code>lihaoyun6</code> 的开发！<em>源代码已开源</em></h4><ul>
-<li><a href="https://github.com/lihaoyun6/PD-Runner">Github仓库链接</a></li>
-<li><a href="https://github.com/lihaoyun6/PD-Runner/releases">Github官方下载地址</a></li>
-</ul>
-<h2 id="视频教程"><a href="#视频教程" class="headerlink" title="视频教程"></a>视频教程</h2><iframe src="//player.bilibili.com/player.html?aid=718124956&bvid=BV1yQ4y1k7W8&cid=409893958&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p><img src="https://github.com/lihaoyun6/PD-Runner/raw/main/img/PDrunner.png" alt="PD Runner.png"><br><strong>官方适配的 <code>PD</code> 和 <code>PD Runner</code> 的 <code>BigSur</code> 图标下载地址</strong>：<a href="http://www.123pan.com/s/motA-8O6Rv">123网盘</a></p>
-<h3 id="声明：本项目仅用于学习研究使用-请支持正版"><a href="#声明：本项目仅用于学习研究使用-请支持正版" class="headerlink" title="声明：本项目仅用于学习研究使用, 请支持正版!"></a>声明：本项目仅用于学习研究使用, 请支持正版!</h3>]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>虚拟机</tag>
-        <tag>Parallels Desktop</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Motrix-Aria2-Patch</title>
     <url>/posts/12c86dc4/</url>
     <content><![CDATA[<h1 id="Motrix-Aria2-Patch"><a href="#Motrix-Aria2-Patch" class="headerlink" title="Motrix-Aria2-Patch"></a>Motrix-Aria2-Patch</h1><h4 id="编译增强版Aria2添加到Motrix中使得下载速度加快"><a href="#编译增强版Aria2添加到Motrix中使得下载速度加快" class="headerlink" title="编译增强版Aria2添加到Motrix中使得下载速度加快"></a>编译增强版Aria2添加到Motrix中使得下载速度加快</h4><p><a href="https://github.com/Little-Red-Stone/Motrix-Aria2-Patch">GitHub链接</a></p>
@@ -313,6 +275,32 @@
         <tag>Aria2</tag>
         <tag>Motrix</tag>
         <tag>Download</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>PD正确使用方法</title>
+    <url>/posts/4df5381d/</url>
+    <content><![CDATA[<h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><h4 id="之前我是用了-自动操作-制作app来实现-PD-使用时间到期后的无限使用"><a href="#之前我是用了-自动操作-制作app来实现-PD-使用时间到期后的无限使用" class="headerlink" title="之前我是用了 自动操作 制作app来实现 PD 使用时间到期后的无限使用"></a>之前我是用了 <code>自动操作</code> 制作app来实现 <code>PD</code> <strong>使用时间到期后</strong>的无限使用</h4><p>如有兴趣的话可以看看这篇文章 <a href="https://segmentfault.com/a/1190000040690683">如何正确使用Parallels Desktop（全网最细）</a></p>
+<span id="more"></span>
+
+<h4 id="但现在，不得不为国内的开发者竖起大拇指！！"><a href="#但现在，不得不为国内的开发者竖起大拇指！！" class="headerlink" title="但现在，不得不为国内的开发者竖起大拇指！！"></a>但现在，不得不为国内的开发者<strong>竖起大拇指！！</strong></h4><p><em>(因为TNT团队更新的不及时）</em> 有人已经开发出了 <code>PD</code> 的启动工具，名为 <code>PD-Runner</code> </p>
+<h2 id="功能简介"><a href="#功能简介" class="headerlink" title="功能简介"></a>功能简介</h2><p>适用于 <code>Parallels Desktop</code> 的启动器, 可以<strong>无视试用期限</strong>强制启动客户机 <em>(支持 PD17.1.0)</em><br>A tool for <code>Parallels Desktop</code> can start VMs <strong>even expired</strong> <em>(Support for PD17.1.0 or earlier)</em></p>
+<h3 id="使用-Usage"><a href="#使用-Usage" class="headerlink" title="使用 Usage"></a>使用 Usage</h3><p><code>PD Runner</code> 是一个菜单栏APP, 启动后会在菜单栏显示程序图标. 点击菜单栏图标可列出当前Mac上安装的所有客户机, 然后点击客户机名称即可启动对应的客户机.<br><code>PD Runner</code> will show an icon in the menu bar. Click menubar icon to list all the VMs on your Mac, and click the name to start your VM.</p>
+<h3 id="截图-Screenshot"><a href="#截图-Screenshot" class="headerlink" title="截图 Screenshot"></a>截图 Screenshot</h3><p><img src="https://github.com/lihaoyun6/PD-Runner/raw/main/img/Screenshot.png" alt="Screenshot.png"></p>
+<h4 id="感谢-lihaoyun6-的开发！源代码已开源"><a href="#感谢-lihaoyun6-的开发！源代码已开源" class="headerlink" title="感谢 lihaoyun6 的开发！源代码已开源"></a>感谢 <code>lihaoyun6</code> 的开发！<em>源代码已开源</em></h4><ul>
+<li><a href="https://github.com/lihaoyun6/PD-Runner">Github仓库链接</a></li>
+<li><a href="https://github.com/lihaoyun6/PD-Runner/releases">Github官方下载地址</a></li>
+</ul>
+<h2 id="视频教程"><a href="#视频教程" class="headerlink" title="视频教程"></a>视频教程</h2><iframe src="//player.bilibili.com/player.html?aid=718124956&bvid=BV1yQ4y1k7W8&cid=409893958&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p><img src="https://github.com/lihaoyun6/PD-Runner/raw/main/img/PDrunner.png" alt="PD Runner.png"><br><strong>官方适配的 <code>PD</code> 和 <code>PD Runner</code> 的 <code>BigSur</code> 图标下载地址</strong>：<a href="http://www.123pan.com/s/motA-8O6Rv">123网盘</a></p>
+<h3 id="声明：本项目仅用于学习研究使用-请支持正版"><a href="#声明：本项目仅用于学习研究使用-请支持正版" class="headerlink" title="声明：本项目仅用于学习研究使用, 请支持正版!"></a>声明：本项目仅用于学习研究使用, 请支持正版!</h3>]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>虚拟机</tag>
+        <tag>Parallels Desktop</tag>
       </tags>
   </entry>
   <entry>
@@ -363,6 +351,30 @@
       </categories>
       <tags>
         <tag>Hello World</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>test</title>
+    <url>/posts/d87f7e0c/</url>
+    <content><![CDATA[<h1 id="This-is-a-pictrue-test-file"><a href="#This-is-a-pictrue-test-file" class="headerlink" title="This is a pictrue test file"></a>This is a pictrue test file</h1><p><img src="/posts/d87f7e0c/1.png"></p>
+]]></content>
+      <categories>
+        <category>lead in</category>
+      </categories>
+      <tags>
+        <tag>test</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>新浪微博图床测试</title>
+    <url>/posts/7fe2d4e2/</url>
+    <content><![CDATA[<p><img src="https://tva1.sinaimg.cn/large/008rt8mCgy1gyb59gkchtj30mg03odga.jpg" alt="test.png"><br><img src="https://tva1.sinaimg.cn/large/008rt8mCgy1gyb597cvixj30sg0sgqbq.jpg" alt="Xinlang_weibo.png"></p>
+]]></content>
+      <categories>
+        <category>lead in</category>
+      </categories>
+      <tags>
+        <tag>test</tag>
       </tags>
   </entry>
 </search>
