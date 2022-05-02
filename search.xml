@@ -1,73 +1,42 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>JetBrains-Patch</title>
-    <url>/posts/fafc48ce/</url>
-    <content><![CDATA[<p>本脚本根据<a href="https://www.xuzihao.com/posts/6aacb63a/">Jetbrains系列产品最新激活方式</a>中的原理制作完成，<del>之前说过，我的shell是废的</del>，所以这个还是用Python写的</p>
-<span id="more"></span>
-<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>首先从<a href="https://github.com/ja-netfilter/ja-netfilter/releases">GitHub</a>下载ja-netfilter，放到用户文件夹，如: <code>/Users/???/</code> 中</p>
-<p>然后，从<a href="https://www.123pan.com/s/motA-zO6Rv">123云盘</a>下载 <code>mymap.jar</code> 放入 <code>ja-netfilter</code> 文件夹中的 <code>plugins</code> 文件夹，比如</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/Users/???/ja-netfilter/plugins/</span><br></pre></td></tr></table></figure>
-
-<p>然后将<a href="https://github.com/Little-Red-Stone/JetBrains-Patch">本源码</a>下载、解压到 <code>ja-netfilter</code> 文件夹，在终端运行</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd ja-netfilter &amp;&amp; python3 main.py</span><br></pre></td></tr></table></figure>
-
-<h3 id="解释"><a href="#解释" class="headerlink" title="解释"></a>解释</h3><p>解释一下脚本的内容</p>
-<h4 id="当出现以下两行时"><a href="#当出现以下两行时" class="headerlink" title="当出现以下两行时"></a>当出现以下两行时</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">What name do you want to use?</span><br><span class="line">Name=</span><br></pre></td></tr></table></figure>
-<p>在 <code>name</code> 中输入你想在IDE中显示的许可证激活名称</p>
-<h4 id="当出现以下四行时"><a href="#当出现以下四行时" class="headerlink" title="当出现以下四行时"></a>当出现以下四行时</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">What time limit do you want?</span><br><span class="line">Year=</span><br><span class="line">Month=</span><br><span class="line">Day=</span><br></pre></td></tr></table></figure>
-<p>在 <code>Year</code> 、 <code>Month</code> 、 <code>Day</code> 中分别输入你想在IDE中显示的，许可证激活到期的年份、月份、日期</p>
-<h3 id="尽情享受吧！"><a href="#尽情享受吧！" class="headerlink" title="尽情享受吧！"></a>尽情享受吧！</h3>]]></content>
-      <categories>
-        <category>Projects</category>
-      </categories>
-      <tags>
-        <tag>Python</tag>
-        <tag>JetBrains</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Jetbrains系列产品最新激活方式</title>
-    <url>/posts/6aacb63a/</url>
-    <content><![CDATA[<p>继  <code>BetterIntelliJ</code> 和  <code>jetbrains-agent</code> 之后，  <code>FineAgent</code>，<code>ide-eval-resetter</code> 这两个项目也停止了</p>
-<p>来自 <code>FineAgent</code> 作者的解释</p>
+    <title>Jetbrains系列产品最新激活方式（2022.1及以上）</title>
+    <url>/posts/c09dd01c/</url>
+    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>本篇文章**<del>没有什么特别的内容</del>**，zhile大神的<code>ja-netfilter</code>插件还是能正常使用的</p>
 <blockquote>
-<p>至于停止的原因，有很多，抛开来自外部的压力不谈，就<a href="https://www.jiweichengzhu.com/article/6df4ae9141e0417c86eeceb7adb84100">FineAgent</a>这个补丁本身来说，它只是一个冲动下的产物，并不完善，距离前辈们的补丁还是有一定差距，首当其冲的就是它无法激活插件，尤其在<a href="https://www.jiweichengzhu.com/article/6fe36c02159d4925a1223b426dbfc71d">idea2021.3</a>版本发布之后，很多人私信我，<a href="https://www.jiweichengzhu.com/topic/85dab3064dff41198b5a02d164e2d6c3">idea</a>插件该如何激活？<br>每当此时，我都会有一种深深的无力感，感慨自己为何没有沉下心来深入研究学习，为此甚至有那么一丝丝的愧疚感，基于多重考量，最终我决定停止<a href="https://www.jiweichengzhu.com/article/6df4ae9141e0417c86eeceb7adb84100">FineAgent</a>这个项目，以此事为鉴，在以后的工作和学习中，务必要静下心来，做事情再也不要流于表面。</p>
+<p><em>Q：那为什么还要写这篇文章呢？？？</em><br><em>A：为的是分享一个<strong>自动化脚本</strong>和说明<strong>2022版本的问题</strong></em></p>
 </blockquote>
-<p>所以，既然如此多大佬开发的插件无法使用时，我们该如何破解呢？</p>
-<h4 id="好了，现在步入我们的主题"><a href="#好了，现在步入我们的主题" class="headerlink" title="好了，现在步入我们的主题"></a>好了，现在步入我们的主题</h4><h1 id="最新版的JetBrians系产品如何激活？"><a href="#最新版的JetBrians系产品如何激活？" class="headerlink" title="最新版的JetBrians系产品如何激活？"></a>最新版的JetBrians系产品如何激活？</h1><span id="more"></span>
-<h3 id="tips-如果安装过无限试用、修改过-hosts-请先卸载干净旧版本再安装，否需无法激活！"><a href="#tips-如果安装过无限试用、修改过-hosts-请先卸载干净旧版本再安装，否需无法激活！" class="headerlink" title="tips: 如果安装过无限试用、修改过 hosts 请先卸载干净旧版本再安装，否需无法激活！"></a>tips: 如果安装过无限试用、修改过 hosts 请先卸载干净旧版本再安装，否需无法激活！</h3><h4 id="本文以Pycharm为例，其他JetBrains软件都是可以的"><a href="#本文以Pycharm为例，其他JetBrains软件都是可以的" class="headerlink" title="本文以Pycharm为例，其他JetBrains软件都是可以的"></a>本文以Pycharm为例，其他JetBrains软件都是可以的</h4><p>在自动重置试用期脚本被Jetbrains官方反制之后，Z大又紧急推出了一款通用的开源插件ja-netfilter，见名知意，是一个网络过滤器，此款插件可以同时做到激活idea、激活插件、自定义激活时间长短、自定义LicenseName，怎么样，我称其为最灵活不为过吧？</p>
-<p>噼里啪啦说了这么多，有人可能还没明白ja-netfilter牛在哪里，这不就是跟FineAgent一样的效果吗？别着急，我们来看几张图。<br><img src="media/16392986836065.jpg"></p>
-<p><img src="media/16392988459390.jpg"></p>
-<p>这几张图是不是就印证了我上面提到了ja-netfilter的几项功能，现在我再说它最灵活，不为过吧？</p>
-<p>不得不感慨，Z大真是猛如虎，我只考虑到了一个点，他直接考虑一个面，确实nb，现在来教大家如何使用这个东西。</p>
-<h2 id="1-获取ja-netfilter文件（任选其一）"><a href="#1-获取ja-netfilter文件（任选其一）" class="headerlink" title="1. 获取ja-netfilter文件（任选其一）"></a>1. 获取ja-netfilter文件（任选其一）</h2><ol>
-<li>去<code>ja-netfilter</code>的<a href="https://github.com/ja-netfilter/ja-netfilter/releases">github</a>上下载作者打好的release包；</li>
-<li>获取<a href="https://github.com/ja-netfilter/ja-netfilter"><code>ja-netfilter</code></a>代码，在本地编译打包；</li>
-</ol>
-<p><img src="media/16392990989818.jpg"></p>
-<p>如上图，<code>ja-netfilter.jar</code>是插件核心所在，而<code>janf_config.txt</code>则是用来配置上面说的LicenseName之类的信息。（提示：需要自己创建）</p>
-<h2 id="2-移除之前包括-FineAgent-在内的所有补丁（必须）"><a href="#2-移除之前包括-FineAgent-在内的所有补丁（必须）" class="headerlink" title="2. 移除之前包括 FineAgent 在内的所有补丁（必须）"></a>2. 移除之前包括 <code>FineAgent</code> 在内的所有补丁（必须）</h2><p><img src="media/16392992089296.jpg"><br><img src="media/16392992788537.jpg"></p>
-<p>这一步看起来很简单，但很多人都在这里吃了亏，删除补丁了之后，这里务必要删除或者注释掉，否则idea会启动不了了。</p>
-<h2 id="3-获取短期正版激活码"><a href="#3-获取短期正版激活码" class="headerlink" title="3. 获取短期正版激活码"></a>3. 获取短期正版激活码</h2><p>在<a href="https://jetbra.in/s">jetbra.in</a>获取激活码，注意是正版哦，无需补丁，直接填进去就可以激活的那种。<br><img src="media/16392995563537.jpg"></p>
-<p>如上图，可以看到这是一个短期的激活码，到2022.1.7号就过期了，但是它不需要任何补丁，填进去就能直接用，可能大家有疑惑了，这马上就到2022.1.7号了，岂不是马上就要过期了？别急，我们继续往下看。</p>
-<h2 id="4-引入ja-netfilter插件"><a href="#4-引入ja-netfilter插件" class="headerlink" title="4. 引入ja-netfilter插件"></a>4. 引入ja-netfilter插件</h2><p>这个-javaagent的配置就不用我多说了吧，跟以往的一些agent用法一模一样:</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">-javaagent:&lt;你的保存位置&gt;</span><br></pre></td></tr></table></figure>
-<p>比如我的:</p>
-<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">-javaagent:/Users/xzh/Downloads/JetbrainsCrack/ja-netfilter/ja-netfilter.jar</span><br></pre></td></tr></table></figure>
-<p><img src="media/16392998894356.jpg"></p>
-<h2 id="5-在janf-config-txt文件中配置信息"><a href="#5-在janf-config-txt文件中配置信息" class="headerlink" title="5. 在janf_config.txt文件中配置信息"></a>5. 在janf_config.txt文件中配置信息</h2><p>文章开头处已经说过了，ja-netfilter是一个网络过滤器，你可以把它看做是一个网络阻断器更为合适，结合这配置文件内容，大家应该好理解第三步的疑问了吧，你激活码过期又如何？我阻断网络校验，从中作梗让它一直校验不成功，变相的让Jetbrains认为我的激活码一直还是有效的，这思路绝了。</p>
-<p>配置文件中的dns和url都是直指Jetbrains的网站和请求，至于匹配符equal和prefix，字面意思也好理解，这些大家可以直接去<a href="https://github.com/ja-netfilter/ja-netfilter">github</a>上看，Z大写的非常详细。</p>
-<p>这里给出一个 <code>janf_config.txt</code> 配置（当然你可以根据后文自行修改）：</p>
-<figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line">[DNS]</span><br><span class="line">EQUAL,jetbrains.com</span><br><span class="line">[URL]</span><br><span class="line">PREFIX,<span class="symbol">https:</span>/<span class="regexp">/account.jetbrains.com/lservice</span><span class="regexp">/rpc/validate</span>Key.action</span><br><span class="line">[MyMap]</span><br><span class="line">EQUAL,licenseeName-&gt;穷则独善其身，达则兼济天下。 ————《孟子·尽心上》</span><br><span class="line">EQUAL,gracePeriodDays-&gt;<span class="number">30</span></span><br><span class="line">EQUAL,paidUpTo-&gt;<span class="number">9999</span>-<span class="number">12</span>-<span class="number">31</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>注意:我们重点看一下 <code>MyMap</code> 这个配置项，这个非常重要（下载链接我放在下面了），如果缺少了它，并不会影响 <code>ja-netfilter</code> 的使用，只是你将无法灵活定义Pycharm的一些激活信息，这个plugin是在一开始是没有在 <code>ja-netfilter</code> 中的，后来由热心大佬给补上了，实在是给力。</li>
-<li>格式<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">licenseeName：被许可人姓名，也就是Licensed to xxx里的xxx信息；</span><br><span class="line">gracePeriodDays：宽限期；</span><br><span class="line">paidUpTo：激活的时长，也就是熟悉的2099-12-31的配置；</span><br></pre></td></tr></table></figure></li>
-<li>下载地址: <a href="https://www.123pan.com/s/motA-zO6Rv">123云盘</a></li>
+<span id="more"></span>
+
+<h2 id="自动化脚本"><a href="#自动化脚本" class="headerlink" title="自动化脚本"></a>自动化脚本</h2><p>在之前的文章中，我提到过<a href="https://jetbra.in/s">某位热心网友</a> <code>https://jetbra.in/s</code> ，提供了激活码和服务器激活的选项<br>如果你近期浏览过该网站的话，可能会发现顶部多了一点东西，如图</p>
+<p><img src="https://ww1.sinaimg.cn/large/008rt8mCgy1h1ugxdz3r3j32ke1844mx.jpg" alt="image-20220502223308304"></p>
+<p>可见啊，热心网友十分的热心<del>(不然怎么叫热心网友……)</del>，甚至为我们打包好了破解脚本</p>
+<h3 id="如何食用"><a href="#如何食用" class="headerlink" title="如何食用"></a>如何食用</h3><h4 id="0-注意"><a href="#0-注意" class="headerlink" title="0. 注意"></a>0. 注意</h4><p><strong>脚本会直接替换掉vmoptions文件，请做好备份</strong><br>请先卸载 <code>IDE Eval Reset</code> 插件</p>
+<h4 id="1-下载文件-并解压"><a href="#1-下载文件-并解压" class="headerlink" title="1. 下载文件 并解压"></a>1. 下载文件 并解压</h4><p>在 <a href="https://jetbra.in/s">https://jetbra.in/s</a> 网页中点击名为 <code>ja-netfilter-all.zip</code> 的链接直接下载即可</p>
+<p>如图即为解压后的文件</p>
+<p><strong>注意⚠️</strong> 脚本不包含 <code>mymap</code> 插件，不过mymap也出现了一些问题，后文会提到</p>
+<p><img src="https://ww1.sinaimg.cn/large/008rt8mCgy1h1ugxjcggqj315u0u2tg1.jpg" alt="image-20220502223831969"></p>
+<h4 id="2-运行脚本"><a href="#2-运行脚本" class="headerlink" title="2. 运行脚本"></a>2. 运行脚本</h4><p>打开终端（或者cmd，powershell等等）进入 <code>ja-netfilter-all.zip</code> 解压的文件夹</p>
+<h5 id="Windows用户"><a href="#Windows用户" class="headerlink" title="Windows用户"></a>Windows用户</h5><ul>
+<li><p>为当前用户安装：运行 <code>scripts\install-current-user.vbs</code> ，回车</p>
+</li>
+<li><p>为所有用户安装：输入 <code>scripts\install-all-users.vbs</code> ，回车</p>
+</li>
 </ul>
-<p>这个mymap本身并不能直接使用，而是作为ja-netfilter的一个plugin存在，如下图所示。<br><img src="media/16393004609063.jpg"></p>
-<h2 id="6-重启Pycharm，加载-ja-netfilter-插件"><a href="#6-重启Pycharm，加载-ja-netfilter-插件" class="headerlink" title="6. 重启Pycharm，加载 ja-netfilter 插件"></a>6. 重启Pycharm，加载 <code>ja-netfilter</code> 插件</h2><p><img src="media/16393005498617.jpg"></p>
-<p>搞定收工，zhile猛如虎！！！<br>有兴趣的同学可以看看zhile自己写的文章: <a href="https://zhile.io/2021/11/29/ja-netfilter-javaagent-lib.html">传送门</a></p>
+<h5 id="Mac-amp-Linux用户"><a href="#Mac-amp-Linux用户" class="headerlink" title="Mac&amp;Linux用户"></a>Mac&amp;Linux用户</h5><ul>
+<li>运行 <code>scripts/install.sh</code> ，回车</li>
+</ul>
+<p>此后就会自动配置好javaagent了</p>
+<h4 id="3-激活"><a href="#3-激活" class="headerlink" title="3. 激活"></a>3. 激活</h4><p>和之前的方法一样，用激活码或者服务器<br>详见我之前的文章（<a href="https://www.xuzihao.com/posts/1a41e785/">传送门</a> 请看1.1.3.），或官方的<code>readme</code>（我截取了一点）</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">License code: </span><br><span class="line">    1. log out of the jb account in the &#x27;Licenses&#x27; window</span><br><span class="line">    2. use key on page https://jetbra.in/5d84466e31722979266057664941a71893322460</span><br><span class="line">    3. don&#x27;t care about the activation time, it is a fallback license and will not expire</span><br><span class="line"></span><br><span class="line">Or</span><br><span class="line"></span><br><span class="line">License server:</span><br><span class="line">    1. log out of the jb account in the &#x27;Licenses&#x27; window</span><br><span class="line">    2. use license server url: https://jetbra.in</span><br></pre></td></tr></table></figure>
+
+<h3 id="新版本的某些问题"><a href="#新版本的某些问题" class="headerlink" title="新版本的某些问题"></a>新版本的某些问题</h3><p>每次 <code>JetBrains</code> 的<strong>大版本更新</strong>都会对破解造成<strong>一些麻烦</strong>，<strong>包括这次的2022版</strong></p>
+<h4 id="1-mymap插件失效"><a href="#1-mymap插件失效" class="headerlink" title="1. mymap插件失效"></a>1. mymap插件失效</h4><p><code>Jetbrains</code>这次更新把<code>mymap的</code>功能给搞废了。但是，<strong>不能自定义激活信息</strong>这点，其实总的来说<strong>问题不大</strong>，也不会有人天天没事去盯着激活信息看的  <del>不会真的有那么无聊的人吧（小声bb</del></p>
+<h4 id="2-显示激活码到期时间"><a href="#2-显示激活码到期时间" class="headerlink" title="2.显示激活码到期时间"></a>2.显示激活码到期时间</h4><p> 刚刚<code>readme</code>中也提到了，用<strong>激活码激活</strong>的小伙伴会发现，<strong>竟然出现了有效期！？</strong>类似下图</p>
+<p><img src="https://ww1.sinaimg.cn/large/008rt8mCgy1h1ugzeywloj31ag0sodkv.jpg" alt="image-20220502230624941"></p>
+<p>究其原因应该还是mymap插件的失效导致的</p>
+<p>用激活服务器就没这个问题，直接是 <code>授权给 &lt;用户名&gt;</code></p>
 ]]></content>
       <categories>
         <category>教程</category>
@@ -77,6 +46,19 @@
         <tag>JetBrains</tag>
         <tag>C++</tag>
         <tag>App</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>新浪微博图床测试</title>
+    <url>/posts/7fe2d4e2/</url>
+    <content><![CDATA[<span id="more"></span>
+<p><img src="https://tva1.sinaimg.cn/large/008rt8mCgy1gyb59gkchtj30mg03odga.jpg" alt="test.png"><br><img src="https://tva1.sinaimg.cn/large/008rt8mCgy1gyb597cvixj30sg0sgqbq.jpg" alt="Xinlang_weibo.png"></p>
+]]></content>
+      <categories>
+        <category>lead in</category>
+      </categories>
+      <tags>
+        <tag>test</tag>
       </tags>
   </entry>
   <entry>
@@ -122,42 +104,85 @@
       </tags>
   </entry>
   <entry>
-    <title>Jetbrains系列产品最新激活方式（2022.1及以上）</title>
-    <url>/posts/c09dd01c/</url>
-    <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>本篇文章**<del>没有什么特别的内容</del>**，zhile大神的<code>ja-netfilter</code>插件还是能正常使用的</p>
-<blockquote>
-<p><em>Q：那为什么还要写这篇文章呢？？？</em><br><em>A：为的是分享一个<strong>自动化脚本</strong>和说明<strong>2022版本的问题</strong></em></p>
-</blockquote>
+    <title>JetBrains-Patch</title>
+    <url>/posts/fafc48ce/</url>
+    <content><![CDATA[<p>本脚本根据<a href="https://www.xuzihao.com/posts/6aacb63a/">Jetbrains系列产品最新激活方式</a>中的原理制作完成，<del>之前说过，我的shell是废的</del>，所以这个还是用Python写的</p>
 <span id="more"></span>
+<h2 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h2><h3 id="下载"><a href="#下载" class="headerlink" title="下载"></a>下载</h3><p>首先从<a href="https://github.com/ja-netfilter/ja-netfilter/releases">GitHub</a>下载ja-netfilter，放到用户文件夹，如: <code>/Users/???/</code> 中</p>
+<p>然后，从<a href="https://www.123pan.com/s/motA-zO6Rv">123云盘</a>下载 <code>mymap.jar</code> 放入 <code>ja-netfilter</code> 文件夹中的 <code>plugins</code> 文件夹，比如</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">/Users/???/ja-netfilter/plugins/</span><br></pre></td></tr></table></figure>
 
-<h2 id="自动化脚本"><a href="#自动化脚本" class="headerlink" title="自动化脚本"></a>自动化脚本</h2><p>在之前的文章中，我提到过<a href="https://jetbra.in/s">某位热心网友</a> <code>https://jetbra.in/s</code> ，提供了激活码和服务器激活的选项<br>如果你近期浏览过该网站的话，可能会发现顶部多了一点东西，如图</p>
-<p><img src="https://ww1.sinaimg.cn/large/008rt8mCgy1h1ugxdz3r3j32ke1844mx.jpg" alt="image-20220502223308304"></p>
-<p>可见啊，热心网友十分的热心<del>(不然怎么叫热心网友……)</del>，甚至为我们打包好了破解脚本</p>
-<h3 id="如何食用"><a href="#如何食用" class="headerlink" title="如何食用"></a>如何食用</h3><h4 id="0-注意"><a href="#0-注意" class="headerlink" title="0. 注意"></a>0. 注意</h4><p><strong>脚本会直接替换掉vmoptions文件，请做好备份</strong><br>请先卸载 <code>IDE Eval Reset</code> 插件</p>
-<h4 id="1-下载文件-并解压"><a href="#1-下载文件-并解压" class="headerlink" title="1. 下载文件 并解压"></a>1. 下载文件 并解压</h4><p>在 <a href="https://jetbra.in/s">https://jetbra.in/s</a> 网页中点击名为 <code>ja-netfilter-all.zip</code> 的链接直接下载即可</p>
-<p>如图即为解压后的文件</p>
-<p><strong>注意⚠️</strong> 脚本不包含 <code>mymap</code> 插件，不过mymap也出现了一些问题，后文会提到</p>
-<p><img src="https://ww1.sinaimg.cn/large/008rt8mCgy1h1ugxjcggqj315u0u2tg1.jpg" alt="image-20220502223831969"></p>
-<h4 id="2-运行脚本"><a href="#2-运行脚本" class="headerlink" title="2. 运行脚本"></a>2. 运行脚本</h4><p>打开终端（或者cmd，powershell等等）进入 <code>ja-netfilter-all.zip</code> 解压的文件夹</p>
-<h5 id="Windows用户"><a href="#Windows用户" class="headerlink" title="Windows用户"></a>Windows用户</h5><ul>
-<li><p>为当前用户安装：运行 <code>scripts\install-current-user.vbs</code> ，回车</p>
-</li>
-<li><p>为所有用户安装：输入 <code>scripts\install-all-users.vbs</code> ，回车</p>
-</li>
-</ul>
-<h5 id="Mac-amp-Linux用户"><a href="#Mac-amp-Linux用户" class="headerlink" title="Mac&amp;Linux用户"></a>Mac&amp;Linux用户</h5><ul>
-<li>运行 <code>scripts/install.sh</code> ，回车</li>
-</ul>
-<p>此后就会自动配置好javaagent了</p>
-<h4 id="3-激活"><a href="#3-激活" class="headerlink" title="3. 激活"></a>3. 激活</h4><p>和之前的方法一样，用激活码或者服务器<br>详见我之前的文章（<a href="https://www.xuzihao.com/posts/1a41e785/">传送门</a> 请看1.1.3.），或官方的<code>readme</code>（我截取了一点）</p>
-<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">License code: </span><br><span class="line">    1. log out of the jb account in the &#x27;Licenses&#x27; window</span><br><span class="line">    2. use key on page https://jetbra.in/5d84466e31722979266057664941a71893322460</span><br><span class="line">    3. don&#x27;t care about the activation time, it is a fallback license and will not expire</span><br><span class="line"></span><br><span class="line">Or</span><br><span class="line"></span><br><span class="line">License server:</span><br><span class="line">    1. log out of the jb account in the &#x27;Licenses&#x27; window</span><br><span class="line">    2. use license server url: https://jetbra.in</span><br></pre></td></tr></table></figure>
+<p>然后将<a href="https://github.com/Little-Red-Stone/JetBrains-Patch">本源码</a>下载、解压到 <code>ja-netfilter</code> 文件夹，在终端运行</p>
+<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd ja-netfilter &amp;&amp; python3 main.py</span><br></pre></td></tr></table></figure>
 
-<h3 id="新版本的某些问题"><a href="#新版本的某些问题" class="headerlink" title="新版本的某些问题"></a>新版本的某些问题</h3><p>每次 <code>JetBrains</code> 的<strong>大版本更新</strong>都会对破解造成<strong>一些麻烦</strong>，<strong>包括这次的2022版</strong></p>
-<h4 id="1-mymap插件失效"><a href="#1-mymap插件失效" class="headerlink" title="1. mymap插件失效"></a>1. mymap插件失效</h4><p><code>Jetbrains</code>这次更新把<code>mymap的</code>功能给搞废了。但是，<strong>不能自定义激活信息</strong>这点，其实总的来说<strong>问题不大</strong>，也不会有人天天没事去盯着激活信息看的  <del>不会真的有那么无聊的人吧（小声bb</del></p>
-<h4 id="2-显示激活码到期时间"><a href="#2-显示激活码到期时间" class="headerlink" title="2.显示激活码到期时间"></a>2.显示激活码到期时间</h4><p> 刚刚<code>readme</code>中也提到了，用<strong>激活码激活</strong>的小伙伴会发现，<strong>竟然出现了有效期！？</strong>类似下图</p>
-<p><img src="https://ww1.sinaimg.cn/large/008rt8mCgy1h1ugzeywloj31ag0sodkv.jpg" alt="image-20220502230624941"></p>
-<p>究其原因应该还是mymap插件的失效导致的</p>
-<p>用激活服务器就没这个问题，直接是 <code>授权给 &lt;用户名&gt;</code></p>
+<h3 id="解释"><a href="#解释" class="headerlink" title="解释"></a>解释</h3><p>解释一下脚本的内容</p>
+<h4 id="当出现以下两行时"><a href="#当出现以下两行时" class="headerlink" title="当出现以下两行时"></a>当出现以下两行时</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">What name do you want to use?</span><br><span class="line">Name=</span><br></pre></td></tr></table></figure>
+<p>在 <code>name</code> 中输入你想在IDE中显示的许可证激活名称</p>
+<h4 id="当出现以下四行时"><a href="#当出现以下四行时" class="headerlink" title="当出现以下四行时"></a>当出现以下四行时</h4><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">What time limit do you want?</span><br><span class="line">Year=</span><br><span class="line">Month=</span><br><span class="line">Day=</span><br></pre></td></tr></table></figure>
+<p>在 <code>Year</code> 、 <code>Month</code> 、 <code>Day</code> 中分别输入你想在IDE中显示的，许可证激活到期的年份、月份、日期</p>
+<h3 id="尽情享受吧！"><a href="#尽情享受吧！" class="headerlink" title="尽情享受吧！"></a>尽情享受吧！</h3>]]></content>
+      <categories>
+        <category>Projects</category>
+      </categories>
+      <tags>
+        <tag>Python</tag>
+        <tag>JetBrains</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>test</title>
+    <url>/posts/d87f7e0c/</url>
+    <content><![CDATA[<h1 id="This-is-a-pictrue-test-file"><a href="#This-is-a-pictrue-test-file" class="headerlink" title="This is a pictrue test file"></a>This is a pictrue test file</h1><p><img src="test/1.png"></p>
+]]></content>
+      <categories>
+        <category>lead in</category>
+      </categories>
+      <tags>
+        <tag>test</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Jetbrains系列产品最新激活方式</title>
+    <url>/posts/6aacb63a/</url>
+    <content><![CDATA[<p>继  <code>BetterIntelliJ</code> 和  <code>jetbrains-agent</code> 之后，  <code>FineAgent</code>，<code>ide-eval-resetter</code> 这两个项目也停止了</p>
+<p>来自 <code>FineAgent</code> 作者的解释</p>
+<blockquote>
+<p>至于停止的原因，有很多，抛开来自外部的压力不谈，就<a href="https://www.jiweichengzhu.com/article/6df4ae9141e0417c86eeceb7adb84100">FineAgent</a>这个补丁本身来说，它只是一个冲动下的产物，并不完善，距离前辈们的补丁还是有一定差距，首当其冲的就是它无法激活插件，尤其在<a href="https://www.jiweichengzhu.com/article/6fe36c02159d4925a1223b426dbfc71d">idea2021.3</a>版本发布之后，很多人私信我，<a href="https://www.jiweichengzhu.com/topic/85dab3064dff41198b5a02d164e2d6c3">idea</a>插件该如何激活？<br>每当此时，我都会有一种深深的无力感，感慨自己为何没有沉下心来深入研究学习，为此甚至有那么一丝丝的愧疚感，基于多重考量，最终我决定停止<a href="https://www.jiweichengzhu.com/article/6df4ae9141e0417c86eeceb7adb84100">FineAgent</a>这个项目，以此事为鉴，在以后的工作和学习中，务必要静下心来，做事情再也不要流于表面。</p>
+</blockquote>
+<p>所以，既然如此多大佬开发的插件无法使用时，我们该如何破解呢？</p>
+<h4 id="好了，现在步入我们的主题"><a href="#好了，现在步入我们的主题" class="headerlink" title="好了，现在步入我们的主题"></a>好了，现在步入我们的主题</h4><h1 id="最新版的JetBrians系产品如何激活？"><a href="#最新版的JetBrians系产品如何激活？" class="headerlink" title="最新版的JetBrians系产品如何激活？"></a>最新版的JetBrians系产品如何激活？</h1><span id="more"></span>
+<h3 id="tips-如果安装过无限试用、修改过-hosts-请先卸载干净旧版本再安装，否需无法激活！"><a href="#tips-如果安装过无限试用、修改过-hosts-请先卸载干净旧版本再安装，否需无法激活！" class="headerlink" title="tips: 如果安装过无限试用、修改过 hosts 请先卸载干净旧版本再安装，否需无法激活！"></a>tips: 如果安装过无限试用、修改过 hosts 请先卸载干净旧版本再安装，否需无法激活！</h3><h4 id="本文以Pycharm为例，其他JetBrains软件都是可以的"><a href="#本文以Pycharm为例，其他JetBrains软件都是可以的" class="headerlink" title="本文以Pycharm为例，其他JetBrains软件都是可以的"></a>本文以Pycharm为例，其他JetBrains软件都是可以的</h4><p>在自动重置试用期脚本被Jetbrains官方反制之后，Z大又紧急推出了一款通用的开源插件ja-netfilter，见名知意，是一个网络过滤器，此款插件可以同时做到激活idea、激活插件、自定义激活时间长短、自定义LicenseName，怎么样，我称其为最灵活不为过吧？</p>
+<p>噼里啪啦说了这么多，有人可能还没明白ja-netfilter牛在哪里，这不就是跟FineAgent一样的效果吗？别着急，我们来看几张图。<br><img src="media/16392986836065.jpg"></p>
+<p><img src="media/16392988459390.jpg"></p>
+<p>这几张图是不是就印证了我上面提到了ja-netfilter的几项功能，现在我再说它最灵活，不为过吧？</p>
+<p>不得不感慨，Z大真是猛如虎，我只考虑到了一个点，他直接考虑一个面，确实nb，现在来教大家如何使用这个东西。</p>
+<h2 id="1-获取ja-netfilter文件（任选其一）"><a href="#1-获取ja-netfilter文件（任选其一）" class="headerlink" title="1. 获取ja-netfilter文件（任选其一）"></a>1. 获取ja-netfilter文件（任选其一）</h2><ol>
+<li>去<code>ja-netfilter</code>的<a href="https://github.com/ja-netfilter/ja-netfilter/releases">github</a>上下载作者打好的release包；</li>
+<li>获取<a href="https://github.com/ja-netfilter/ja-netfilter"><code>ja-netfilter</code></a>代码，在本地编译打包；</li>
+</ol>
+<p><img src="media/16392990989818.jpg"></p>
+<p>如上图，<code>ja-netfilter.jar</code>是插件核心所在，而<code>janf_config.txt</code>则是用来配置上面说的LicenseName之类的信息。（提示：需要自己创建）</p>
+<h2 id="2-移除之前包括-FineAgent-在内的所有补丁（必须）"><a href="#2-移除之前包括-FineAgent-在内的所有补丁（必须）" class="headerlink" title="2. 移除之前包括 FineAgent 在内的所有补丁（必须）"></a>2. 移除之前包括 <code>FineAgent</code> 在内的所有补丁（必须）</h2><p><img src="media/16392992089296.jpg"><br><img src="media/16392992788537.jpg"></p>
+<p>这一步看起来很简单，但很多人都在这里吃了亏，删除补丁了之后，这里务必要删除或者注释掉，否则idea会启动不了了。</p>
+<h2 id="3-获取短期正版激活码"><a href="#3-获取短期正版激活码" class="headerlink" title="3. 获取短期正版激活码"></a>3. 获取短期正版激活码</h2><p>在<a href="https://jetbra.in/s">jetbra.in</a>获取激活码，注意是正版哦，无需补丁，直接填进去就可以激活的那种。<br><img src="media/16392995563537.jpg"></p>
+<p>如上图，可以看到这是一个短期的激活码，到2022.1.7号就过期了，但是它不需要任何补丁，填进去就能直接用，可能大家有疑惑了，这马上就到2022.1.7号了，岂不是马上就要过期了？别急，我们继续往下看。</p>
+<h2 id="4-引入ja-netfilter插件"><a href="#4-引入ja-netfilter插件" class="headerlink" title="4. 引入ja-netfilter插件"></a>4. 引入ja-netfilter插件</h2><p>这个-javaagent的配置就不用我多说了吧，跟以往的一些agent用法一模一样:</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">-javaagent:&lt;你的保存位置&gt;</span><br></pre></td></tr></table></figure>
+<p>比如我的:</p>
+<figure class="highlight java"><table><tr><td class="code"><pre><span class="line">-javaagent:/Users/xzh/Downloads/JetbrainsCrack/ja-netfilter/ja-netfilter.jar</span><br></pre></td></tr></table></figure>
+<p><img src="media/16392998894356.jpg"></p>
+<h2 id="5-在janf-config-txt文件中配置信息"><a href="#5-在janf-config-txt文件中配置信息" class="headerlink" title="5. 在janf_config.txt文件中配置信息"></a>5. 在janf_config.txt文件中配置信息</h2><p>文章开头处已经说过了，ja-netfilter是一个网络过滤器，你可以把它看做是一个网络阻断器更为合适，结合这配置文件内容，大家应该好理解第三步的疑问了吧，你激活码过期又如何？我阻断网络校验，从中作梗让它一直校验不成功，变相的让Jetbrains认为我的激活码一直还是有效的，这思路绝了。</p>
+<p>配置文件中的dns和url都是直指Jetbrains的网站和请求，至于匹配符equal和prefix，字面意思也好理解，这些大家可以直接去<a href="https://github.com/ja-netfilter/ja-netfilter">github</a>上看，Z大写的非常详细。</p>
+<p>这里给出一个 <code>janf_config.txt</code> 配置（当然你可以根据后文自行修改）：</p>
+<figure class="highlight ruby"><table><tr><td class="code"><pre><span class="line">[DNS]</span><br><span class="line">EQUAL,jetbrains.com</span><br><span class="line">[URL]</span><br><span class="line">PREFIX,<span class="symbol">https:</span>/<span class="regexp">/account.jetbrains.com/lservice</span><span class="regexp">/rpc/validate</span>Key.action</span><br><span class="line">[MyMap]</span><br><span class="line">EQUAL,licenseeName-&gt;穷则独善其身，达则兼济天下。 ————《孟子·尽心上》</span><br><span class="line">EQUAL,gracePeriodDays-&gt;<span class="number">30</span></span><br><span class="line">EQUAL,paidUpTo-&gt;<span class="number">9999</span>-<span class="number">12</span>-<span class="number">31</span></span><br></pre></td></tr></table></figure>
+<ul>
+<li>注意:我们重点看一下 <code>MyMap</code> 这个配置项，这个非常重要（下载链接我放在下面了），如果缺少了它，并不会影响 <code>ja-netfilter</code> 的使用，只是你将无法灵活定义Pycharm的一些激活信息，这个plugin是在一开始是没有在 <code>ja-netfilter</code> 中的，后来由热心大佬给补上了，实在是给力。</li>
+<li>格式<figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">licenseeName：被许可人姓名，也就是Licensed to xxx里的xxx信息；</span><br><span class="line">gracePeriodDays：宽限期；</span><br><span class="line">paidUpTo：激活的时长，也就是熟悉的2099-12-31的配置；</span><br></pre></td></tr></table></figure></li>
+<li>下载地址: <a href="https://www.123pan.com/s/motA-zO6Rv">123云盘</a></li>
+</ul>
+<p>这个mymap本身并不能直接使用，而是作为ja-netfilter的一个plugin存在，如下图所示。<br><img src="media/16393004609063.jpg"></p>
+<h2 id="6-重启Pycharm，加载-ja-netfilter-插件"><a href="#6-重启Pycharm，加载-ja-netfilter-插件" class="headerlink" title="6. 重启Pycharm，加载 ja-netfilter 插件"></a>6. 重启Pycharm，加载 <code>ja-netfilter</code> 插件</h2><p><img src="media/16393005498617.jpg"></p>
+<p>搞定收工，zhile猛如虎！！！<br>有兴趣的同学可以看看zhile自己写的文章: <a href="https://zhile.io/2021/11/29/ja-netfilter-javaagent-lib.html">传送门</a></p>
 ]]></content>
       <categories>
         <category>教程</category>
@@ -290,6 +315,32 @@
       </tags>
   </entry>
   <entry>
+    <title>PD正确使用方法</title>
+    <url>/posts/4df5381d/</url>
+    <content><![CDATA[<h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><h4 id="之前我是用了-自动操作-制作app来实现-PD-使用时间到期后的无限使用"><a href="#之前我是用了-自动操作-制作app来实现-PD-使用时间到期后的无限使用" class="headerlink" title="之前我是用了 自动操作 制作app来实现 PD 使用时间到期后的无限使用"></a>之前我是用了 <code>自动操作</code> 制作app来实现 <code>PD</code> <strong>使用时间到期后</strong>的无限使用</h4><p>如有兴趣的话可以看看这篇文章 <a href="https://segmentfault.com/a/1190000040690683">如何正确使用Parallels Desktop（全网最细）</a></p>
+<span id="more"></span>
+
+<h4 id="但现在，不得不为国内的开发者竖起大拇指！！"><a href="#但现在，不得不为国内的开发者竖起大拇指！！" class="headerlink" title="但现在，不得不为国内的开发者竖起大拇指！！"></a>但现在，不得不为国内的开发者<strong>竖起大拇指！！</strong></h4><p><em>(因为TNT团队更新的不及时）</em> 有人已经开发出了 <code>PD</code> 的启动工具，名为 <code>PD-Runner</code> </p>
+<h2 id="功能简介"><a href="#功能简介" class="headerlink" title="功能简介"></a>功能简介</h2><p>适用于 <code>Parallels Desktop</code> 的启动器, 可以<strong>无视试用期限</strong>强制启动客户机 <em>(支持 PD17.1.0)</em><br>A tool for <code>Parallels Desktop</code> can start VMs <strong>even expired</strong> <em>(Support for PD17.1.0 or earlier)</em></p>
+<h3 id="使用-Usage"><a href="#使用-Usage" class="headerlink" title="使用 Usage"></a>使用 Usage</h3><p><code>PD Runner</code> 是一个菜单栏APP, 启动后会在菜单栏显示程序图标. 点击菜单栏图标可列出当前Mac上安装的所有客户机, 然后点击客户机名称即可启动对应的客户机.<br><code>PD Runner</code> will show an icon in the menu bar. Click menubar icon to list all the VMs on your Mac, and click the name to start your VM.</p>
+<h3 id="截图-Screenshot"><a href="#截图-Screenshot" class="headerlink" title="截图 Screenshot"></a>截图 Screenshot</h3><p><img src="https://github.com/lihaoyun6/PD-Runner/raw/main/img/Screenshot.png" alt="Screenshot.png"></p>
+<h4 id="感谢-lihaoyun6-的开发！源代码已开源"><a href="#感谢-lihaoyun6-的开发！源代码已开源" class="headerlink" title="感谢 lihaoyun6 的开发！源代码已开源"></a>感谢 <code>lihaoyun6</code> 的开发！<em>源代码已开源</em></h4><ul>
+<li><a href="https://github.com/lihaoyun6/PD-Runner">Github仓库链接</a></li>
+<li><a href="https://github.com/lihaoyun6/PD-Runner/releases">Github官方下载地址</a></li>
+</ul>
+<h2 id="视频教程"><a href="#视频教程" class="headerlink" title="视频教程"></a>视频教程</h2><iframe src="//player.bilibili.com/player.html?aid=718124956&bvid=BV1yQ4y1k7W8&cid=409893958&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
+
+<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p><img src="https://github.com/lihaoyun6/PD-Runner/raw/main/img/PDrunner.png" alt="PD Runner.png"><br><strong>官方适配的 <code>PD</code> 和 <code>PD Runner</code> 的 <code>BigSur</code> 图标下载地址</strong>：<a href="http://www.123pan.com/s/motA-8O6Rv">123网盘</a></p>
+<h3 id="声明：本项目仅用于学习研究使用-请支持正版"><a href="#声明：本项目仅用于学习研究使用-请支持正版" class="headerlink" title="声明：本项目仅用于学习研究使用, 请支持正版!"></a>声明：本项目仅用于学习研究使用, 请支持正版!</h3>]]></content>
+      <categories>
+        <category>教程</category>
+      </categories>
+      <tags>
+        <tag>虚拟机</tag>
+        <tag>Parallels Desktop</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Motrix-Aria2-Patch</title>
     <url>/posts/12c86dc4/</url>
     <content><![CDATA[<h1 id="Motrix-Aria2-Patch"><a href="#Motrix-Aria2-Patch" class="headerlink" title="Motrix-Aria2-Patch"></a>Motrix-Aria2-Patch</h1><h4 id="编译增强版Aria2添加到Motrix中使得下载速度加快"><a href="#编译增强版Aria2添加到Motrix中使得下载速度加快" class="headerlink" title="编译增强版Aria2添加到Motrix中使得下载速度加快"></a>编译增强版Aria2添加到Motrix中使得下载速度加快</h4><p><a href="https://github.com/Little-Red-Stone/Motrix-Aria2-Patch">GitHub链接</a></p>
@@ -327,32 +378,6 @@
         <tag>Aria2</tag>
         <tag>Motrix</tag>
         <tag>Download</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>PD正确使用方法</title>
-    <url>/posts/4df5381d/</url>
-    <content><![CDATA[<h2 id="写在前面"><a href="#写在前面" class="headerlink" title="写在前面"></a>写在前面</h2><h4 id="之前我是用了-自动操作-制作app来实现-PD-使用时间到期后的无限使用"><a href="#之前我是用了-自动操作-制作app来实现-PD-使用时间到期后的无限使用" class="headerlink" title="之前我是用了 自动操作 制作app来实现 PD 使用时间到期后的无限使用"></a>之前我是用了 <code>自动操作</code> 制作app来实现 <code>PD</code> <strong>使用时间到期后</strong>的无限使用</h4><p>如有兴趣的话可以看看这篇文章 <a href="https://segmentfault.com/a/1190000040690683">如何正确使用Parallels Desktop（全网最细）</a></p>
-<span id="more"></span>
-
-<h4 id="但现在，不得不为国内的开发者竖起大拇指！！"><a href="#但现在，不得不为国内的开发者竖起大拇指！！" class="headerlink" title="但现在，不得不为国内的开发者竖起大拇指！！"></a>但现在，不得不为国内的开发者<strong>竖起大拇指！！</strong></h4><p><em>(因为TNT团队更新的不及时）</em> 有人已经开发出了 <code>PD</code> 的启动工具，名为 <code>PD-Runner</code> </p>
-<h2 id="功能简介"><a href="#功能简介" class="headerlink" title="功能简介"></a>功能简介</h2><p>适用于 <code>Parallels Desktop</code> 的启动器, 可以<strong>无视试用期限</strong>强制启动客户机 <em>(支持 PD17.1.0)</em><br>A tool for <code>Parallels Desktop</code> can start VMs <strong>even expired</strong> <em>(Support for PD17.1.0 or earlier)</em></p>
-<h3 id="使用-Usage"><a href="#使用-Usage" class="headerlink" title="使用 Usage"></a>使用 Usage</h3><p><code>PD Runner</code> 是一个菜单栏APP, 启动后会在菜单栏显示程序图标. 点击菜单栏图标可列出当前Mac上安装的所有客户机, 然后点击客户机名称即可启动对应的客户机.<br><code>PD Runner</code> will show an icon in the menu bar. Click menubar icon to list all the VMs on your Mac, and click the name to start your VM.</p>
-<h3 id="截图-Screenshot"><a href="#截图-Screenshot" class="headerlink" title="截图 Screenshot"></a>截图 Screenshot</h3><p><img src="https://github.com/lihaoyun6/PD-Runner/raw/main/img/Screenshot.png" alt="Screenshot.png"></p>
-<h4 id="感谢-lihaoyun6-的开发！源代码已开源"><a href="#感谢-lihaoyun6-的开发！源代码已开源" class="headerlink" title="感谢 lihaoyun6 的开发！源代码已开源"></a>感谢 <code>lihaoyun6</code> 的开发！<em>源代码已开源</em></h4><ul>
-<li><a href="https://github.com/lihaoyun6/PD-Runner">Github仓库链接</a></li>
-<li><a href="https://github.com/lihaoyun6/PD-Runner/releases">Github官方下载地址</a></li>
-</ul>
-<h2 id="视频教程"><a href="#视频教程" class="headerlink" title="视频教程"></a>视频教程</h2><iframe src="//player.bilibili.com/player.html?aid=718124956&bvid=BV1yQ4y1k7W8&cid=409893958&page=1" scrolling="no" border="0" frameborder="no" framespacing="0" allowfullscreen="true"> </iframe>
-
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p><img src="https://github.com/lihaoyun6/PD-Runner/raw/main/img/PDrunner.png" alt="PD Runner.png"><br><strong>官方适配的 <code>PD</code> 和 <code>PD Runner</code> 的 <code>BigSur</code> 图标下载地址</strong>：<a href="http://www.123pan.com/s/motA-8O6Rv">123网盘</a></p>
-<h3 id="声明：本项目仅用于学习研究使用-请支持正版"><a href="#声明：本项目仅用于学习研究使用-请支持正版" class="headerlink" title="声明：本项目仅用于学习研究使用, 请支持正版!"></a>声明：本项目仅用于学习研究使用, 请支持正版!</h3>]]></content>
-      <categories>
-        <category>教程</category>
-      </categories>
-      <tags>
-        <tag>虚拟机</tag>
-        <tag>Parallels Desktop</tag>
       </tags>
   </entry>
   <entry>
@@ -403,31 +428,6 @@
       </categories>
       <tags>
         <tag>Hello World</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>test</title>
-    <url>/posts/d87f7e0c/</url>
-    <content><![CDATA[<h1 id="This-is-a-pictrue-test-file"><a href="#This-is-a-pictrue-test-file" class="headerlink" title="This is a pictrue test file"></a>This is a pictrue test file</h1><p><img src="test/1.png"></p>
-]]></content>
-      <categories>
-        <category>lead in</category>
-      </categories>
-      <tags>
-        <tag>test</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>新浪微博图床测试</title>
-    <url>/posts/7fe2d4e2/</url>
-    <content><![CDATA[<span id="more"></span>
-<p><img src="https://tva1.sinaimg.cn/large/008rt8mCgy1gyb59gkchtj30mg03odga.jpg" alt="test.png"><br><img src="https://tva1.sinaimg.cn/large/008rt8mCgy1gyb597cvixj30sg0sgqbq.jpg" alt="Xinlang_weibo.png"></p>
-]]></content>
-      <categories>
-        <category>lead in</category>
-      </categories>
-      <tags>
-        <tag>test</tag>
       </tags>
   </entry>
 </search>
