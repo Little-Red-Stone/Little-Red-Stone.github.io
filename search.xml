@@ -10,13 +10,13 @@
 <span id="more"></span>
 
 <h2 id="自动化脚本"><a href="#自动化脚本" class="headerlink" title="自动化脚本"></a>自动化脚本</h2><p>在之前的文章中，我提到过<a href="https://jetbra.in/s">某位热心网友</a> <code>https://jetbra.in/s</code> ，提供了激活码和服务器激活的选项<br>如果你近期浏览过该网站的话，可能会发现顶部多了一点东西，如图</p>
-<p><img src="https://ww1.sinaimg.cn/large/008rt8mCgy1h1ugxdz3r3j32ke1844mx.jpg" alt="image-20220502223308304"></p>
+<p><img src="https://pic.rmb.bdstatic.com/bjh/d58f8286c180c1694b136458105651d6.jpeg" alt="008rt8mCgy1h1ugxdz3r3j32ke1844mx.jpg"></p>
 <p>可见啊，热心网友十分的热心<del>(不然怎么叫热心网友……)</del>，甚至为我们打包好了破解脚本</p>
 <h3 id="如何食用"><a href="#如何食用" class="headerlink" title="如何食用"></a>如何食用</h3><h4 id="0-注意"><a href="#0-注意" class="headerlink" title="0. 注意"></a>0. 注意</h4><p><strong>脚本会直接替换掉vmoptions文件，请做好备份</strong><br>请先卸载 <code>IDE Eval Reset</code> 插件</p>
 <h4 id="1-下载文件-并解压"><a href="#1-下载文件-并解压" class="headerlink" title="1. 下载文件 并解压"></a>1. 下载文件 并解压</h4><p>在 <a href="https://jetbra.in/s">https://jetbra.in/s</a> 网页中点击名为 <code>ja-netfilter-all.zip</code> 的链接直接下载即可</p>
 <p>如图即为解压后的文件</p>
 <p><strong>注意⚠️</strong> 脚本不包含 <code>mymap</code> 插件，不过mymap也出现了一些问题，后文会提到</p>
-<p><img src="https://ww1.sinaimg.cn/large/008rt8mCgy1h1ugxjcggqj315u0u2tg1.jpg" alt="image-20220502223831969"></p>
+<p><img src="https://pic.rmb.bdstatic.com/bjh/b5c7dc267f51dc338b6a6a24185e259f.jpeg" alt="008rt8mCgy1h1ugxjcggqj315u0u2tg1.jpg"></p>
 <h4 id="2-运行脚本"><a href="#2-运行脚本" class="headerlink" title="2. 运行脚本"></a>2. 运行脚本</h4><p>打开终端（或者cmd，powershell等等）进入 <code>ja-netfilter-all.zip</code> 解压的文件夹</p>
 <h5 id="Windows用户"><a href="#Windows用户" class="headerlink" title="Windows用户"></a>Windows用户</h5><ul>
 <li><p>为当前用户安装：运行 <code>scripts\install-current-user.vbs</code> ，回车</p>
